@@ -1,0 +1,12 @@
+[
+  {
+    "id": "alu360",
+    "type": "Product",
+    "name": "Alu360",
+    "tagline": "Aluminium Calculator, Quotations & Invoicing",
+    "description": "A complete tool for aluminium window and door businesses — design windows, calculate exact material needs, generate customer quotations, and issue compliant tax invoices.",
+    "tags": ["Aluminium Fabrication", "Calculator", "Quotations & Invoicing"],
+    "href": "/products/alu360",
+    "status": "Live"
+  }
+]

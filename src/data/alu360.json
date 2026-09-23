@@ -1,0 +1,129 @@
+{
+  "hero": {
+    "eyebrow": "Product",
+    "name": "Alu360",
+    "tagline": "The complete tool for aluminium window and door businesses",
+    "description": "Design windows, work out exactly how much material is needed, turn that into a polished customer quotation, and generate a compliant tax invoice — all in one place."
+  },
+  "sections": [
+    {
+      "id": "design",
+      "number": "01",
+      "title": "Designing Windows & Doors",
+      "items": [
+        "Build a window or door section by section — choose the track type (2-track, 3-track, or openable), whether it's all glass or glass with a mosquito mesh (and the mesh grade: 304 SS, 316 SS, fibre, or aluminium), how many shutters it has, and its exact height and width.",
+        "Openable systems ask for a number of panels instead of a track type — the form adapts automatically to the profile you pick.",
+        "Enter dimensions in millimetres, feet, or trade-standard inch-dora shorthand (e.g. 47-3) — switch units any time without losing your entries.",
+        "See a live drawing of the window update instantly as you change the dimensions, so you can visually check the design before committing to it.",
+        "Built-in checks stop you from entering impossible or unrealistic sizes, with clear messages telling you what to fix.",
+        "Set your saw kerf width once — it's remembered and factored into every cutting calculation from then on."
+      ]
+    },
+    {
+      "id": "materials",
+      "number": "02",
+      "title": "Automatic Material Calculation & Cutting Plans",
+      "items": [
+        "Instantly calculates exactly how much aluminium is needed — frame, shutter, interlock, track, and mullion pieces — for the design you've built.",
+        "Also works out how much glass, mosquito mesh, and small hardware (like track caps and channels) is required.",
+        "Figures out the smartest way to cut standard-length aluminium bars (16 ft, 15 ft, or 12 ft) to get the most pieces out of them with the least material wasted, and tells you the wastage percentage.",
+        "Calculates the finished weight of the aluminium profile used, based on your own per-kg-per-foot weights."
+      ]
+    },
+    {
+      "id": "worksheets",
+      "number": "03",
+      "title": "Saving & Managing Designs (Worksheets)",
+      "items": [
+        "Save any calculated design as a \"Worksheet\" so you can come back to it later without redoing the math.",
+        "A dashboard shows all your saved worksheets in one place for quick access.",
+        "Every worksheet gives you three print-ready views: a summary Report (with weight and material totals), a Cutting Plan (a plain, bar-by-bar cut list), and a full Windows List with diagrams — switch between them instantly without re-loading.",
+        "A separate Combine Worksheets report adds up the profile, frame, shutter, and interlock quantities across several worksheets at once — handy for placing a single bulk material order that covers multiple projects or clients."
+      ]
+    },
+    {
+      "id": "quotations",
+      "number": "04",
+      "title": "Building Customer Quotations",
+      "items": [
+        "Create a quotation straight from a saved worksheet, or use Manual Quotation mode to type in sections on the spot when there's no worksheet yet — a fast, spec-only path for jobs that don't need the full material-calculation engine.",
+        "Similar window systems are automatically grouped so you only need to set one price for each system, saving time.",
+        "Choose how each aluminium category is priced — by weight (₹/kg), by length (₹/ft), or as a flat rate per piece — and optionally combine frame, shutter, and interlock into a single \"material\" line at one common rate, still expandable to see each part's own weight.",
+        "Set your own rates for glass, mesh, rubber, brush, and coating.",
+        "Add extra hardware items to the quote (like rollers, handles, or locks) with their own quantity and price — the system remembers your usual rates and suggests them automatically.",
+        "Add labor costs the way that suits you: a flat fee, a percentage of material cost, a rate per square foot, or itemized by task (cutting, glazing, fitting, etc.).",
+        "Add overhead costs, discounts (flat amount or percentage), your profit margin, and tax — correctly split between CGST/SGST or IGST depending on whether it's a local or out-of-state customer.",
+        "Optionally add installation and delivery/transport charges as separate line items.",
+        "Override the price of any single line item with your own flat ₹/sq.ft rate — mark it \"GST Included\" and the quotation will correctly show that line's own tax breakdown without taxing it a second time in the overall total.",
+        "A running total panel shows your full internal cost breakdown as you work — this is never shown to the customer.",
+        "Save quotations as drafts, finalize them, and track their status as they move from Draft → Sent → Accepted or Rejected.",
+        "Capture customer details — name, phone, billing address, delivery address, and any reference number — and save a client once to reuse on future quotations.",
+        "Duplicate an existing quotation as a fresh editable draft — the quickest way to revise one that's already been sent or printed."
+      ]
+    },
+    {
+      "id": "cost-sheet",
+      "number": "05",
+      "title": "Internal Cost Sheet",
+      "items": [
+        "A separate, internal-only Cost Sheet for every quotation, showing your true production cost and resulting profit margin side by side with what the customer was actually billed — including the effect of any manual rate override.",
+        "Never visible to the customer, and never affected by locking a quotation for print."
+      ]
+    },
+    {
+      "id": "printing",
+      "number": "06",
+      "title": "Printing & Sharing",
+      "items": [
+        "One-click Print or Save-as-PDF for a clean, professional, customer-ready quotation, invoice, worksheet report, cutting plan, or windows list.",
+        "Every printed document and browser tab shows its own proper title — the document name, number, and date — instead of a generic app name, so saved PDFs are easy to find and file.",
+        "Switch between mm, ft, and inches on any printed document, independent of your account's default.",
+        "Share a document straight to WhatsApp (or any other app) via your device's native share sheet, where your browser supports it — where it isn't supported, the plain Print/Save-as-PDF option always works.",
+        "Printing a quotation locks it from further edits, so a sent quote can't be quietly changed after the fact — duplicate it to make revisions."
+      ]
+    },
+    {
+      "id": "invoices",
+      "number": "07",
+      "title": "Invoices",
+      "items": [
+        "Generate a tax invoice directly from a quotation — buyer details and line items are pulled across automatically — or create one from scratch for a sale that never went through a quotation.",
+        "Set GST separately for the whole invoice or per line item, with an HSN code per line, and choose CGST+SGST or IGST.",
+        "Invoices are numbered automatically by financial year (e.g. INV-2026-27-0001), with your own configurable prefix.",
+        "Track status from Draft through Issued, then Paid or Cancelled; an issued invoice locks from further edits, keeping your records consistent with what the customer actually received."
+      ]
+    },
+    {
+      "id": "setup",
+      "number": "08",
+      "title": "Setting Up Your Business Once",
+      "items": [
+        "A Rate Card page where you set your default prices — aluminium pricing mode and rates, glass rates, hardware rates, rubber/brush/coating rates, usual labor method, overhead, profit margin, tax rate, HSN codes, standard terms & conditions, and your default display unit — so every new quotation starts pre-filled with your numbers.",
+        "An admin area to manage the shared catalog of aluminium systems/profiles (including a per-profile weight override) and the hardware catalog used throughout the calculator.",
+        "Configure which \"spec\" fields (colour, mesh grade, handle, locking, hinge, notes, and more) show up on your quotation line items and printed documents.",
+        "A company profile page — name, address, phone, GST number, logo, and bank details — feeding every printed document and invoice."
+      ]
+    },
+    {
+      "id": "accounts",
+      "number": "09",
+      "title": "Accounts & Access",
+      "items": [
+        "Simple login and registration with your company details.",
+        "A personal settings page to keep your profile and company information up to date."
+      ]
+    },
+    {
+      "id": "experience",
+      "number": "10",
+      "title": "A Smooth, Reliable Experience",
+      "items": [
+        "A responsive layout that works on both desktop and mobile — busy screens like the Quotation Builder, calculator, and document lists adapt to a phone-sized screen instead of just shrinking.",
+        "Friendly loading indicators while data is fetching, so the app never feels stuck.",
+        "Clear, friendly error screens if something goes wrong, with an easy way to recover.",
+        "Pop-up notifications confirming when something has been saved, updated, or if there's a problem.",
+        "Behind-the-scenes data checks that catch mistakes before they're saved, keeping your worksheets and quotations accurate."
+      ]
+    }
+  ]
+}
