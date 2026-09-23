@@ -1,57 +1,62 @@
 {
   "hero": {
     "eyebrow": "Solutions",
-    "headline": "Software built around how your business actually runs.",
-    "description": "Inventory systems, calculators, quotation and billing tools, custom workflow software — modeled on your real process, not a generic template."
+    "headline": "Here's what we build.",
+    "description": "We don't work off a fixed service list. We build software around how your business already works — starting with what's below."
   },
-  "statement": "Most software is built for people who already think in software. We build for people who think in stock, batches and quotes — and make the software disappear into how they already work.",
+  "story": "We started by building websites. A few clients needed more — a way to track stock, work out pricing, and send bills without doing it all by hand. So we built that too. This page shows what we've actually built, and how we think about the next thing.",
+  "statement": "We build software that makes your business run smoother, faster, and more organized — built around how you already work.",
   "painPoints": {
     "title": "If any of this sounds familiar, that's the kind of problem we solve.",
     "items": [
-      "Quotes get calculated by hand, or in a spreadsheet only one person understands.",
-      "Stock is tracked across notebooks, WhatsApp messages, and memory.",
-      "The same report gets rebuilt manually, every single week.",
-      "Invoices don't quite match what compliance actually requires."
+      "You're juggling WhatsApp, Excel, and paper just to keep things running.",
+      "The same information gets typed into two or three different places.",
+      "Only one person really knows how something works — and things stall when they're away.",
+      "Your website hasn't changed in years and doesn't look like your business today.",
+      "There's no single place to see what's actually happening across the business.",
+      "Something only works because someone remembers to follow up."
     ]
   },
-  "solutions": [
+  "built": [
     {
-      "id": "inventory-systems",
+      "id": "websites",
       "number": "01",
-      "icon": "box",
-      "name": "Inventory & Stock Systems",
-      "tagline": "Know what you have, where it is, and where it's going.",
-      "description": "Raw material, batches and finished stock tracked the way your production actually moves — not a generic stock-keeping template. Proven across multiple stages of aluminium manufacturing; built to fit any production or trading operation.",
-      "tags": ["Stock Tracking", "Batch Management", "Production Visibility"]
+      "icon": "globe",
+      "name": "Websites",
+      "tagline": "A website built for your business, not a copy-paste template.",
+      "description": "This is where we started, and we still do it — a simple, fast website that actually looks like your business. For a lot of clients, it's also the first step before something bigger."
     },
     {
-      "id": "calculators",
+      "id": "stock-tracking",
       "number": "02",
-      "icon": "gauge",
-      "name": "Calculators & Estimators",
-      "tagline": "Turn a manual calculation into an instant, accurate one.",
-      "description": "When pricing or planning depends on a formula — material, wastage, dimensions, margin — we build the tool that does it in seconds instead of a notebook full of maths.",
-      "tags": ["Material Estimation", "Instant Calculation", "Fewer Errors"],
-      "href": "/products/alu360"
+      "icon": "box",
+      "name": "Stock & Inventory Tracking",
+      "tagline": "Know what you have and where it is.",
+      "description": "A system that tracks stock as it moves through your business — what's come in, what's been used, and what's left. It started with one manufacturing client, and the same idea works for any business that needs to keep track of stock."
     },
     {
-      "id": "quotation-billing",
+      "id": "alu360",
       "number": "03",
       "icon": "document",
-      "name": "Quotation & Billing",
-      "tagline": "Professional quotes, compliant invoices, sent faster.",
-      "description": "From a priced quotation to a tax-compliant invoice, with your numbering, your terms, and your branding — without retyping anything twice.",
-      "tags": ["Quotations", "Tax-Compliant Invoicing", "Client Records"],
+      "name": "Alu360",
+      "tagline": "One tool for design, pricing and billing.",
+      "description": "Our first product. It works out what a job needs, turns that into a quote, and creates the bill — all in one place instead of three. Built first for window and door fabricators; the same idea works for any business that quotes and bills for jobs.",
+      "tags": ["Design", "Pricing", "Billing"],
       "href": "/products/alu360"
+    }
+  ],
+  "capabilities": [
+    {
+      "id": "automation",
+      "icon": "flow",
+      "name": "Automating manual work",
+      "description": "If a task only happens because someone remembers to follow up — approvals, reminders, weekly reports — we can build something that does it instead."
     },
     {
-      "id": "custom-workflow",
-      "number": "04",
+      "id": "custom",
       "icon": "layers",
-      "name": "Custom Operational Software",
-      "tagline": "Everything in between, built around your process.",
-      "description": "If it's not on this list, it's probably the next thing we build — any workflow that's still running on spreadsheets, paper, or a system that doesn't quite fit.",
-      "tags": ["Workflow Automation", "Dashboards", "Built Around You"]
+      "name": "Anything else that runs your business",
+      "description": "If it's not listed above, tell us how you work. If it's still on paper or in a spreadsheet, there's a good chance we can build a better way."
     }
   ],
   "process": [
@@ -83,16 +88,16 @@
   ],
   "whyUs": [
     {
-      "title": "We stay involved after launch",
-      "description": "This isn't a build-and-disappear model — we keep coming back for feedback and keep improving what we've built."
+      "title": "We don't disappear after launch",
+      "description": "We keep coming back to check in, fix things, and add what's missing."
     },
     {
-      "title": "We go deep on your workflow, not wide on generic features",
-      "description": "Every business's version of \"inventory\" or \"quoting\" is different — we build around your specific reality instead of a one-size-fits-all template."
+      "title": "We build one thing well, not everything at once",
+      "description": "Every business tracks stock or sends quotes a little differently. We build around how you actually do it."
     },
     {
-      "title": "Coordination-first",
-      "description": "Every engagement starts with understanding your process. You see a demo, you trial it in real operations, and we iterate until it fits."
+      "title": "We start by listening",
+      "description": "Before we build anything, we sit with how you work today — then show you a demo, let you trial it, and keep improving until it fits."
     }
   ],
   "reach": "Working with businesses across Gujarat and Chhattisgarh — from Anand, Vadodara, Jamnagar and Junagadh to Rajkot."

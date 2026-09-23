@@ -4,7 +4,7 @@ import solutions from "@/data/solutions.json";
 import { Reveal } from "@/components/reveal";
 import { FadeIn } from "@/components/fade-in";
 import { BrandRing } from "@/components/brand-ring";
-import { IconBox, IconGauge, IconDocument, IconLayers } from "@/components/icons";
+import { IconBox, IconDocument, IconLayers, IconGlobe, IconFlow } from "@/components/icons";
 
 export const metadata: Metadata = {
   title: "Solutions — Samvay360",
@@ -13,13 +13,14 @@ export const metadata: Metadata = {
 
 const iconMap = {
   box: IconBox,
-  gauge: IconGauge,
   document: IconDocument,
   layers: IconLayers,
+  globe: IconGlobe,
+  flow: IconFlow,
 };
 
 export default function SolutionsPage() {
-  const { hero, statement, painPoints, solutions: items, process, whyUs, reach } =
+  const { hero, story, statement, painPoints, built, capabilities, process, whyUs, reach } =
     solutions;
 
   return (
@@ -48,7 +49,16 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* Pain points — engaging, relatable hook */}
+      {/* Story — honest origin, sets up why "built" vs "capabilities" are different */}
+      <section className="border-b border-neutral-100 bg-white">
+        <div className="mx-auto max-w-3xl px-6 py-14 text-center">
+          <Reveal>
+            <p className="leading-7 text-neutral-500">{story}</p>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* Pain points */}
       <section className="dot-grid relative bg-neutral-50/60">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <Reveal>
@@ -83,19 +93,23 @@ export default function SolutionsPage() {
         </Reveal>
       </section>
 
-      {/* Solutions grid */}
+      {/* What we've built — real, proven work, one entry per actual thing */}
       <section className="border-t border-neutral-100">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-wide text-copper">
-              What we build
+              What we&apos;ve built
             </span>
+            <p className="mt-3 max-w-xl text-neutral-500">
+              Three real things, not a long menu. Each one started as a
+              specific problem for a specific business.
+            </p>
           </Reveal>
-          <div className="mt-8 grid gap-5 sm:grid-cols-2">
-            {items.map((item, i) => {
+          <div className="mt-8 grid gap-5 sm:grid-cols-3">
+            {built.map((item, i) => {
               const Icon = iconMap[item.icon as keyof typeof iconMap];
               return (
-                <Reveal key={item.id} delay={Math.min(i, 4) * 60}>
+                <Reveal key={item.id} delay={i * 60}>
                   <article
                     id={item.id}
                     className="group relative scroll-mt-32 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-copper/40 hover:shadow-xl hover:shadow-copper/10"
@@ -118,22 +132,12 @@ export default function SolutionsPage() {
                     <p className="relative mt-3 leading-7 text-neutral-500">
                       {item.description}
                     </p>
-                    <div className="relative mt-4 flex flex-wrap gap-2">
-                      {item.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="rounded-full border border-neutral-200 px-2.5 py-1 text-xs text-neutral-500 transition-colors duration-300 group-hover:border-copper/20 group-hover:text-copper"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
                     {"href" in item && item.href && (
                       <Link
                         href={item.href}
                         className="relative mt-5 inline-flex items-center gap-2 text-sm font-semibold text-neutral-900 transition-all duration-300 hover:gap-3 hover:text-copper"
                       >
-                        See it in Alu360 →
+                        See the product →
                       </Link>
                     )}
                   </article>
@@ -144,8 +148,44 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* Process */}
+      {/* What we can build next — clearly separate from proven work above */}
       <section className="border-t border-neutral-100 bg-neutral-50/60">
+        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
+          <Reveal>
+            <span className="text-xs font-semibold uppercase tracking-wide text-copper">
+              What we can build next
+            </span>
+            <p className="mt-3 max-w-xl text-neutral-500">
+              Not a fixed list — a way of thinking about a new problem.
+            </p>
+          </Reveal>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2">
+            {capabilities.map((item, i) => {
+              const Icon = iconMap[item.icon as keyof typeof iconMap];
+              return (
+                <Reveal key={item.id} delay={i * 60}>
+                  <div className="flex gap-4 rounded-2xl border border-neutral-200 bg-white p-6">
+                    <div className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-copper/10 text-copper">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-neutral-900">
+                        {item.name}
+                      </h3>
+                      <p className="mt-1.5 leading-6 text-neutral-500">
+                        {item.description}
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="border-t border-neutral-100">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <Reveal>
             <span className="text-xs font-semibold uppercase tracking-wide text-copper">
@@ -176,7 +216,7 @@ export default function SolutionsPage() {
       </section>
 
       {/* Why us */}
-      <section className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
+      <section className="mx-auto max-w-6xl border-t border-neutral-100 px-6 py-20 sm:py-24">
         <Reveal>
           <span className="text-xs font-semibold uppercase tracking-wide text-copper">
             Why Samvay360

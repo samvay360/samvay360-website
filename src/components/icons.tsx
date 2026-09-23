@@ -50,3 +50,27 @@ export function IconDocument(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function IconGlobe(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} {...props}>
+      <circle cx="12" cy="12" r="9" />
+      <path
+        d="M3 12h18 M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.7-3.8-9S9.5 5.6 12 3Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function IconFlow(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} {...props}>
+      <circle cx="5" cy="6" r="2.3" />
+      <circle cx="5" cy="18" r="2.3" />
+      <circle cx="19" cy="12" r="2.3" />
+      <path d="M7 6h6a4 4 0 0 1 4 4M7 18h6a4 4 0 0 0 4-4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}

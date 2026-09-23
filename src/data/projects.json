@@ -3,8 +3,8 @@
     "id": "alu360",
     "type": "Product",
     "name": "Alu360",
-    "tagline": "Aluminium Calculator, Quotations & Invoicing",
-    "description": "A complete tool for aluminium window and door businesses — design windows, calculate exact material needs, generate customer quotations, and issue compliant tax invoices.",
+    "tagline": "Our First Product",
+    "description": "Started as a way to speed up one client's quoting — now a maintained product used by window and door fabricators end to end. Full details on the product page.",
     "tags": ["Aluminium Fabrication", "Calculator", "Quotations & Invoicing"],
     "href": "/products/alu360",
     "status": "Live"
@@ -16,7 +16,7 @@
     "tagline": "Raw Material & Production Stock Tracking",
     "description": "Inventory management built around how an aluminium extrusion unit actually runs — billet stock, die usage and profile output.",
     "tags": ["Extrusion", "Raw Material Tracking"],
-    "href": "/solutions#extrusion-inventory",
+    "href": "/solutions#inventory-systems",
     "status": "Live"
   },
   {
@@ -26,7 +26,7 @@
     "tagline": "Batch, Colour & Finish Tracking",
     "description": "Coating stock, job batches and colour/finish variants tracked from the extrusion yard through the coating line.",
     "tags": ["Powder Coating", "Batch Tracking"],
-    "href": "/solutions#powder-coating-inventory",
+    "href": "/solutions#inventory-systems",
     "status": "Live"
   }
 ]

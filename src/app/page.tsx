@@ -3,14 +3,13 @@ import { BrandRing } from "@/components/brand-ring";
 import { Marquee } from "@/components/marquee";
 import { Reveal } from "@/components/reveal";
 import { FadeIn } from "@/components/fade-in";
-import { IconBox, IconGauge, IconDocument, IconLayers } from "@/components/icons";
+import { IconBox, IconDocument, IconGlobe } from "@/components/icons";
 import solutions from "@/data/solutions.json";
 
 const iconMap = {
   box: IconBox,
-  gauge: IconGauge,
   document: IconDocument,
-  layers: IconLayers,
+  globe: IconGlobe,
 };
 
 const keywords = [
@@ -111,34 +110,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What we build */}
+      {/* What we've built */}
       <section className="border-t border-neutral-100">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <Reveal className="flex flex-wrap items-end justify-between gap-6">
             <div>
               <span className="text-xs font-semibold uppercase tracking-wide text-copper">
-                What we build
+                What we&apos;ve built
               </span>
               <h2 className="mt-3 max-w-lg font-display text-3xl font-extrabold tracking-tight text-neutral-900">
-                Not web development. Not app development. Software modeled on
-                how your operation actually runs.
+                Three real things, not a long service menu.
               </h2>
             </div>
             <Link
               href="/solutions"
               className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-900 transition-all duration-300 hover:gap-3 hover:text-copper"
             >
-              See all solutions →
+              See how we work →
             </Link>
           </Reveal>
 
-          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            {solutions.solutions.map((item, i) => {
+          <div className="mt-10 grid gap-5 sm:grid-cols-3">
+            {solutions.built.map((item, i) => {
               const Icon = iconMap[item.icon as keyof typeof iconMap];
               return (
                 <Reveal key={item.id} delay={i * 60}>
                   <Link
-                    href={`/solutions#${item.id}`}
+                    href={item.href ?? `/solutions#${item.id}`}
                     className="group block h-full rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-copper/40 hover:shadow-lg hover:shadow-copper/10"
                   >
                     <div className="flex h-10 w-10 items-center justify-center rounded-full bg-copper/10 text-copper transition-colors duration-300 group-hover:bg-copper group-hover:text-white">
@@ -156,44 +154,6 @@ export default function Home() {
             })}
           </div>
         </div>
-      </section>
-
-      {/* Featured product */}
-      <section className="bg-ink">
-        <Link
-          href="/products/alu360"
-          className="group relative flex overflow-hidden transition-colors duration-500 hover:bg-ink-soft"
-        >
-          <BrandRing className="pointer-events-none absolute -right-24 bottom-0 h-72 w-72 opacity-[0.12] transition-opacity duration-500 group-hover:opacity-30" />
-          <BrandRing
-            reverse
-            spin={false}
-            className="pointer-events-none absolute -right-6 bottom-10 h-40 w-40 opacity-[0.16] transition-opacity duration-500 group-hover:opacity-35"
-          />
-          <div className="relative mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-8 px-6 py-20 sm:flex-row sm:items-end">
-            <Reveal className="relative">
-              <span className="text-xs font-semibold uppercase tracking-wide text-copper-light">
-                Featured product
-              </span>
-              <h2 className="mt-3 text-5xl font-extrabold tracking-tight text-white sm:text-6xl">
-                Alu360
-              </h2>
-              <p className="mt-4 max-w-md text-neutral-400">
-                Design, material calculation, quotations and invoicing — one
-                tool for aluminium fabricators.
-              </p>
-            </Reveal>
-            <span className="relative flex items-center gap-2 text-sm font-semibold text-white transition-all duration-300 group-hover:gap-3 group-hover:text-copper-light">
-              View product
-              <span
-                aria-hidden
-                className="transition-transform duration-300 group-hover:translate-x-1"
-              >
-                →
-              </span>
-            </span>
-          </div>
-        </Link>
       </section>
     </div>
   );
