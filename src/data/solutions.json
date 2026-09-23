@@ -1,0 +1,99 @@
+{
+  "hero": {
+    "eyebrow": "Solutions",
+    "headline": "Software built around how your business actually runs.",
+    "description": "Inventory systems, calculators, quotation and billing tools, custom workflow software — modeled on your real process, not a generic template."
+  },
+  "statement": "Most software is built for people who already think in software. We build for people who think in stock, batches and quotes — and make the software disappear into how they already work.",
+  "painPoints": {
+    "title": "If any of this sounds familiar, that's the kind of problem we solve.",
+    "items": [
+      "Quotes get calculated by hand, or in a spreadsheet only one person understands.",
+      "Stock is tracked across notebooks, WhatsApp messages, and memory.",
+      "The same report gets rebuilt manually, every single week.",
+      "Invoices don't quite match what compliance actually requires."
+    ]
+  },
+  "solutions": [
+    {
+      "id": "inventory-systems",
+      "number": "01",
+      "icon": "box",
+      "name": "Inventory & Stock Systems",
+      "tagline": "Know what you have, where it is, and where it's going.",
+      "description": "Raw material, batches and finished stock tracked the way your production actually moves — not a generic stock-keeping template. Proven across multiple stages of aluminium manufacturing; built to fit any production or trading operation.",
+      "tags": ["Stock Tracking", "Batch Management", "Production Visibility"]
+    },
+    {
+      "id": "calculators",
+      "number": "02",
+      "icon": "gauge",
+      "name": "Calculators & Estimators",
+      "tagline": "Turn a manual calculation into an instant, accurate one.",
+      "description": "When pricing or planning depends on a formula — material, wastage, dimensions, margin — we build the tool that does it in seconds instead of a notebook full of maths.",
+      "tags": ["Material Estimation", "Instant Calculation", "Fewer Errors"],
+      "href": "/products/alu360"
+    },
+    {
+      "id": "quotation-billing",
+      "number": "03",
+      "icon": "document",
+      "name": "Quotation & Billing",
+      "tagline": "Professional quotes, compliant invoices, sent faster.",
+      "description": "From a priced quotation to a tax-compliant invoice, with your numbering, your terms, and your branding — without retyping anything twice.",
+      "tags": ["Quotations", "Tax-Compliant Invoicing", "Client Records"],
+      "href": "/products/alu360"
+    },
+    {
+      "id": "custom-workflow",
+      "number": "04",
+      "icon": "layers",
+      "name": "Custom Operational Software",
+      "tagline": "Everything in between, built around your process.",
+      "description": "If it's not on this list, it's probably the next thing we build — any workflow that's still running on spreadsheets, paper, or a system that doesn't quite fit.",
+      "tags": ["Workflow Automation", "Dashboards", "Built Around You"]
+    }
+  ],
+  "process": [
+    {
+      "number": "01",
+      "title": "Coordination",
+      "description": "We start by understanding how you actually work — not by pitching a template."
+    },
+    {
+      "number": "02",
+      "title": "Demo",
+      "description": "We show you a working version built around your process, not a generic mockup."
+    },
+    {
+      "number": "03",
+      "title": "Trial",
+      "description": "You use it in your real operations before committing to anything."
+    },
+    {
+      "number": "04",
+      "title": "Iterate",
+      "description": "We keep refining until it fits the way you actually work — until you're satisfied."
+    },
+    {
+      "number": "05",
+      "title": "Stay connected",
+      "description": "We keep asking for feedback after launch. It doesn't end at delivery."
+    }
+  ],
+  "whyUs": [
+    {
+      "title": "We stay involved after launch",
+      "description": "This isn't a build-and-disappear model — we keep coming back for feedback and keep improving what we've built."
+    },
+    {
+      "title": "We go deep on your workflow, not wide on generic features",
+      "description": "Every business's version of \"inventory\" or \"quoting\" is different — we build around your specific reality instead of a one-size-fits-all template."
+    },
+    {
+      "title": "Coordination-first",
+      "description": "Every engagement starts with understanding your process. You see a demo, you trial it in real operations, and we iterate until it fits."
+    }
+  ],
+  "reach": "Working with businesses across Gujarat and Chhattisgarh — from Anand, Vadodara, Jamnagar and Junagadh to Rajkot."
+}

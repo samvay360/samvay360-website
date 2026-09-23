@@ -8,5 +8,25 @@
     "tags": ["Aluminium Fabrication", "Calculator", "Quotations & Invoicing"],
     "href": "/products/alu360",
     "status": "Live"
+  },
+  {
+    "id": "extrusion-inventory",
+    "type": "Solution",
+    "name": "Extrusion Inventory",
+    "tagline": "Raw Material & Production Stock Tracking",
+    "description": "Inventory management built around how an aluminium extrusion unit actually runs — billet stock, die usage and profile output.",
+    "tags": ["Extrusion", "Raw Material Tracking"],
+    "href": "/solutions#extrusion-inventory",
+    "status": "Live"
+  },
+  {
+    "id": "powder-coating-inventory",
+    "type": "Solution",
+    "name": "Powder Coating Inventory",
+    "tagline": "Batch, Colour & Finish Tracking",
+    "description": "Coating stock, job batches and colour/finish variants tracked from the extrusion yard through the coating line.",
+    "tags": ["Powder Coating", "Batch Tracking"],
+    "href": "/solutions#powder-coating-inventory",
+    "status": "Live"
   }
 ]

@@ -31,6 +31,12 @@ export function Footer() {
               Home
             </Link>
             <Link
+              href="/solutions"
+              className="transition-colors duration-300 hover:text-white"
+            >
+              Solutions
+            </Link>
+            <Link
               href="/projects"
               className="transition-colors duration-300 hover:text-white"
             >

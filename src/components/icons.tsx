@@ -26,3 +26,27 @@ export function IconGauge(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function IconBox(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} {...props}>
+      <path
+        d="M3 8.5 12 4l9 4.5-9 4.5-9-4.5Z M3 8.5v7L12 20l9-4.5v-7 M12 13v7"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function IconDocument(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} {...props}>
+      <path
+        d="M6 3h9l4 4v14H6V3Z M15 3v4h4 M9 12h7 M9 16h7 M9 8h3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}

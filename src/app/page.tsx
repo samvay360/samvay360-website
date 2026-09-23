@@ -3,6 +3,15 @@ import { BrandRing } from "@/components/brand-ring";
 import { Marquee } from "@/components/marquee";
 import { Reveal } from "@/components/reveal";
 import { FadeIn } from "@/components/fade-in";
+import { IconBox, IconGauge, IconDocument, IconLayers } from "@/components/icons";
+import solutions from "@/data/solutions.json";
+
+const iconMap = {
+  box: IconBox,
+  gauge: IconGauge,
+  document: IconDocument,
+  layers: IconLayers,
+};
 
 const keywords = [
   "Custom software",
@@ -99,6 +108,53 @@ export default function Home() {
             That&apos;s how <span className="text-copper">Alu360</span> started.
           </p>
         </Reveal>
+        </div>
+      </section>
+
+      {/* What we build */}
+      <section className="border-t border-neutral-100">
+        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
+          <Reveal className="flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <span className="text-xs font-semibold uppercase tracking-wide text-copper">
+                What we build
+              </span>
+              <h2 className="mt-3 max-w-lg font-display text-3xl font-extrabold tracking-tight text-neutral-900">
+                Not web development. Not app development. Software modeled on
+                how your operation actually runs.
+              </h2>
+            </div>
+            <Link
+              href="/solutions"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-neutral-900 transition-all duration-300 hover:gap-3 hover:text-copper"
+            >
+              See all solutions →
+            </Link>
+          </Reveal>
+
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {solutions.solutions.map((item, i) => {
+              const Icon = iconMap[item.icon as keyof typeof iconMap];
+              return (
+                <Reveal key={item.id} delay={i * 60}>
+                  <Link
+                    href={`/solutions#${item.id}`}
+                    className="group block h-full rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-copper/40 hover:shadow-lg hover:shadow-copper/10"
+                  >
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-copper/10 text-copper transition-colors duration-300 group-hover:bg-copper group-hover:text-white">
+                      <Icon className="h-5 w-5" />
+                    </div>
+                    <h3 className="mt-4 font-semibold text-neutral-900">
+                      {item.name}
+                    </h3>
+                    <p className="mt-1.5 text-sm leading-6 text-neutral-500">
+                      {item.tagline}
+                    </p>
+                  </Link>
+                </Reveal>
+              );
+            })}
+          </div>
         </div>
       </section>
 
