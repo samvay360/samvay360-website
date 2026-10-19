@@ -19,6 +19,7 @@
   --font-sans: var(--font-montserrat);
   --font-display: var(--font-montserrat);
   --font-devanagari: var(--font-noto-deva);
+  --font-mono: var(--font-chivo-mono);
 }
 
 body {
@@ -89,4 +90,33 @@ html {
 
 .marquee-track {
   animation: marquee 26s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .animate-bounce {
+    animation: none !important;
+  }
+  .reveal {
+    opacity: 1;
+  }
+  .reveal.is-visible {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--copper-light);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.label-bracket::before {
+  content: "[ ";
+}
+.label-bracket::after {
+  content: " ]";
 }

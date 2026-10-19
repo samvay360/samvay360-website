@@ -26,22 +26,22 @@ export default function SolutionsPage() {
   return (
     <div>
       {/* Hero */}
-      <section className="relative overflow-hidden bg-ink text-white">
+      <section className="dot-grid relative overflow-hidden">
         <BrandRing className="pointer-events-none absolute -right-32 -top-32 h-[26rem] w-[26rem] opacity-50" />
-        <div className="relative mx-auto max-w-6xl px-6 py-20 sm:py-28">
+        <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-32 sm:pb-28 sm:pt-40">
           <FadeIn>
-            <span className="text-xs font-semibold uppercase tracking-wide text-copper-light">
+            <span className="label-bracket font-mono text-xs uppercase tracking-widest text-copper">
               {hero.eyebrow}
             </span>
             <h1 className="mt-4 max-w-2xl font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
               {hero.headline}
             </h1>
-            <p className="mt-4 max-w-lg text-lg leading-8 text-neutral-400">
+            <p className="mt-4 max-w-lg text-lg leading-8 text-neutral-600">
               {hero.description}
             </p>
             <Link
-              href="/#contact"
-              className="mt-8 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-copper-light hover:text-white hover:shadow-lg hover:shadow-copper/20"
+              href="/contact"
+              className="mt-8 inline-flex rounded-lg bg-ink px-6 py-3.5 font-mono text-xs uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-copper"
             >
               Tell us how you work
             </Link>
@@ -97,7 +97,7 @@ export default function SolutionsPage() {
       <section className="border-t border-neutral-100">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-wide text-copper">
+            <span className="label-bracket font-mono text-xs uppercase tracking-widest text-copper">
               What we&apos;ve built
             </span>
             <p className="mt-3 max-w-xl text-neutral-500">
@@ -152,7 +152,7 @@ export default function SolutionsPage() {
       <section className="border-t border-neutral-100 bg-neutral-50/60">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-wide text-copper">
+            <span className="label-bracket font-mono text-xs uppercase tracking-widest text-copper">
               What we can build next
             </span>
             <p className="mt-3 max-w-xl text-neutral-500">
@@ -188,7 +188,7 @@ export default function SolutionsPage() {
       <section className="border-t border-neutral-100">
         <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
           <Reveal>
-            <span className="text-xs font-semibold uppercase tracking-wide text-copper">
+            <span className="label-bracket font-mono text-xs uppercase tracking-widest text-copper">
               How we work
             </span>
             <h2 className="mt-3 max-w-lg font-display text-3xl font-extrabold tracking-tight text-neutral-900">
@@ -218,7 +218,7 @@ export default function SolutionsPage() {
       {/* Why us */}
       <section className="mx-auto max-w-6xl border-t border-neutral-100 px-6 py-20 sm:py-24">
         <Reveal>
-          <span className="text-xs font-semibold uppercase tracking-wide text-copper">
+          <span className="label-bracket font-mono text-xs uppercase tracking-widest text-copper">
             Why Samvay360
           </span>
         </Reveal>
@@ -235,29 +235,29 @@ export default function SolutionsPage() {
           ))}
         </div>
         <Reveal delay={200}>
-          <p className="mt-16 border-t border-neutral-100 pt-8 text-sm text-neutral-400">
+          <p className="mt-16 border-t border-neutral-100 pt-8 text-sm text-neutral-500">
             {reach}
           </p>
         </Reveal>
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden bg-ink">
+      <section className="relative overflow-hidden border-t border-ink/10 bg-white">
         <BrandRing
           spin={false}
           className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 opacity-10"
         />
         <div className="relative mx-auto max-w-6xl px-6 py-24">
           <Reveal>
-            <h2 className="font-display text-3xl font-extrabold tracking-tight text-white">
+            <h2 className="font-display text-3xl font-extrabold tracking-tight">
               Tell us how your operation actually works
             </h2>
-            <p className="mt-3 max-w-md text-neutral-400">
+            <p className="mt-3 max-w-md text-neutral-600">
               We&apos;ll start there — not with a template.
             </p>
             <Link
-              href="/#contact"
-              className="mt-6 inline-flex rounded-full bg-white px-6 py-3 text-sm font-semibold text-neutral-900 transition-all duration-300 hover:-translate-y-0.5 hover:bg-copper-light hover:text-white hover:shadow-lg hover:shadow-copper/20"
+              href="/contact"
+              className="mt-6 inline-flex rounded-lg bg-ink px-6 py-3.5 font-mono text-xs uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-copper"
             >
               Get in touch
             </Link>

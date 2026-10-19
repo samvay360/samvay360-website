@@ -1,0 +1,97 @@
+[
+  {
+    "when": "Early projects",
+    "title": "Fixing our own problems",
+    "description": "We started by building things for ourselves and while studying: a hands-free remote control so the TV volume could change without touching a remote, an IoT home security camera, and Nari, a women's safety app (2023).",
+    "tags": [
+      "Hardware",
+      "IoT",
+      "Mobile app",
+      "Student projects"
+    ]
+  },
+  {
+    "when": "2024",
+    "title": "Websites for businesses",
+    "description": "Our first client sites, including one corporate website that brought two businesses together in a single site.",
+    "tags": [
+      "Websites"
+    ]
+  },
+  {
+    "when": "2024",
+    "title": "BrokersNet",
+    "description": "A configurable real estate marketplace for Android and iOS, with listings and filters managed from an admin panel.",
+    "tags": [
+      "Flutter",
+      "Google Maps",
+      "Admin panel"
+    ],
+    "href": "/projects/brokersnet"
+  },
+  {
+    "when": "2024",
+    "title": "Aluminium Stock Management",
+    "description": "Inventory for aluminium businesses covering materials and hardware, plus extrusion: bundles, dispatch and stock, with Code 128 barcodes and role-based access.",
+    "tags": [
+      "Inventory",
+      "Barcodes",
+      "Extrusion"
+    ],
+    "href": "/projects/aluminium-stock-management"
+  },
+  {
+    "when": "October 2025",
+    "title": "Alum Section Repairs",
+    "description": "A website for an aluminium section repair business.",
+    "tags": [
+      "Website",
+      "Live"
+    ],
+    "href": "https://alumsectionrepairs.co.in/",
+    "external": true
+  },
+  {
+    "when": "December 2025",
+    "title": "Lord Aluminium",
+    "description": "A website for an aluminium business.",
+    "tags": [
+      "Website",
+      "Live"
+    ],
+    "href": "https://www.lordaluminium.in/",
+    "external": true
+  },
+  {
+    "when": "January 2026",
+    "title": "Alu360",
+    "description": "It began as a calculator to work out aluminium material, and is now a full product for design, cutting, quotation and GST invoicing.",
+    "tags": [
+      "Calculator",
+      "Quotations",
+      "GST invoicing"
+    ],
+    "href": "/products/alu360"
+  },
+  {
+    "when": "March 2026",
+    "title": "SafarSetu",
+    "description": "A trip organising app, now in open testing on Google Play.",
+    "tags": [
+      "Mobile app",
+      "Open testing"
+    ],
+    "href": "https://play.google.com/store/apps/details?id=com.safarsetu.app",
+    "external": true
+  },
+  {
+    "when": "Today",
+    "title": "Based in Gujarat, India",
+    "description": "Working with businesses wherever they are, and staying connected after launch.",
+    "tags": [
+      "Gujarat",
+      "India",
+      "Remote-friendly"
+    ]
+  }
+]

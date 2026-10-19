@@ -3,9 +3,13 @@
     "id": "alu360",
     "type": "Product",
     "name": "Alu360",
-    "tagline": "Our First Product",
+    "tagline": "Aluminium Calculator, Quotes & Invoices",
     "description": "Started as a way to speed up one client's quoting — now a maintained product used by window and door fabricators end to end. Full details on the product page.",
-    "tags": ["Aluminium Fabrication", "Calculator", "Quotations & Invoicing"],
+    "tags": [
+      "Aluminium Fabrication",
+      "Calculator",
+      "Quotations & Invoicing"
+    ],
     "href": "/products/alu360",
     "status": "Live"
   },
@@ -15,8 +19,11 @@
     "name": "Extrusion Inventory",
     "tagline": "Raw Material & Production Stock Tracking",
     "description": "Inventory management built around how an aluminium extrusion unit actually runs — billet stock, die usage and profile output.",
-    "tags": ["Extrusion", "Raw Material Tracking"],
-    "href": "/solutions#inventory-systems",
+    "tags": [
+      "Extrusion",
+      "Raw Material Tracking"
+    ],
+    "href": "/projects/extrusion-inventory",
     "status": "Live"
   },
   {
@@ -25,8 +32,80 @@
     "name": "Powder Coating Inventory",
     "tagline": "Batch, Colour & Finish Tracking",
     "description": "Coating stock, job batches and colour/finish variants tracked from the extrusion yard through the coating line.",
-    "tags": ["Powder Coating", "Batch Tracking"],
-    "href": "/solutions#inventory-systems",
+    "tags": [
+      "Powder Coating",
+      "Batch Tracking"
+    ],
+    "href": "/projects/powder-coating-inventory",
+    "status": "Live"
+  },
+  {
+    "id": "aluminium-stock-management",
+    "type": "Solution",
+    "name": "Aluminium Stock Management",
+    "tagline": "Production to Dispatch",
+    "description": "Inventory system covering production to dispatch, with Code 128 barcode bundles, real-time stock deduction, role-based access and reports.",
+    "tags": [
+      "Manufacturing",
+      "Barcode Tracking",
+      "Next.js",
+      "Supabase"
+    ],
+    "href": "/projects/aluminium-stock-management",
+    "status": "2024"
+  },
+  {
+    "id": "brokersnet",
+    "type": "Project",
+    "name": "BrokersNet",
+    "tagline": "Configurable Real Estate Marketplace",
+    "description": "PropTech mobile platform with backend-driven property listings, interactive map search and advanced filters on Android and iOS, all configurable from an admin panel.",
+    "tags": [
+      "Real Estate",
+      "Flutter",
+      "Google Maps",
+      "Mobile App"
+    ],
+    "href": "/projects/brokersnet",
+    "status": "2024"
+  },
+  {
+    "id": "safarsetu",
+    "type": "Product",
+    "name": "SafarSetu",
+    "tagline": "Trip Organising App",
+    "description": "An app for organising trips, in open testing on Google Play since March 2026.",
+    "tags": [
+      "Mobile App",
+      "Travel"
+    ],
+    "href": "https://play.google.com/store/apps/details?id=com.safarsetu.app",
+    "status": "Open testing"
+  },
+  {
+    "id": "alum-section-repairs",
+    "type": "Website",
+    "name": "Alum Section Repairs",
+    "tagline": "Business Website",
+    "description": "Website for an aluminium section repair business, delivered in October 2025.",
+    "tags": [
+      "Website",
+      "Aluminium"
+    ],
+    "href": "https://alumsectionrepairs.co.in/",
+    "status": "Live"
+  },
+  {
+    "id": "lord-aluminium",
+    "type": "Website",
+    "name": "Lord Aluminium",
+    "tagline": "Business Website",
+    "description": "Website for an aluminium business, delivered in December 2025.",
+    "tags": [
+      "Website",
+      "Aluminium"
+    ],
+    "href": "https://www.lordaluminium.in/",
     "status": "Live"
   }
 ]

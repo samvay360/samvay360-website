@@ -47,7 +47,7 @@ export function ProjectsGrid({ items }: { items: ProjectItem[] }) {
       )}
 
       {visible.length === 0 ? (
-        <p className="py-20 text-center text-neutral-400">
+        <p className="py-20 text-center text-neutral-500">
           Nothing here yet — check back soon.
         </p>
       ) : (
@@ -56,6 +56,7 @@ export function ProjectsGrid({ items }: { items: ProjectItem[] }) {
             <Reveal key={item.id} delay={i * 60}>
               <Link
                 href={item.href}
+                {...(item.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 className="group relative grid grid-cols-[auto_1fr] items-start gap-5 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-copper/40 hover:shadow-xl hover:shadow-copper/10 sm:grid-cols-[5rem_1fr_auto] sm:items-center sm:gap-8 sm:p-8"
               >
                 <span
@@ -65,7 +66,7 @@ export function ProjectsGrid({ items }: { items: ProjectItem[] }) {
                   {String(i + 1).padStart(2, "0")}
                 </span>
 
-                <span className="relative flex items-baseline gap-2 font-display text-sm font-bold text-neutral-300 transition-colors duration-300 group-hover:text-copper sm:flex-col sm:gap-0 sm:border-r sm:border-neutral-100 sm:pr-8">
+                <span className="relative flex items-baseline gap-2 font-display text-sm font-bold text-neutral-500 transition-colors duration-300 group-hover:text-copper sm:flex-col sm:gap-0 sm:border-r sm:border-neutral-100 sm:pr-8">
                   {String(i + 1).padStart(2, "0")}
                 </span>
 
@@ -74,13 +75,13 @@ export function ProjectsGrid({ items }: { items: ProjectItem[] }) {
                     <span className="text-xs font-semibold uppercase tracking-wide text-copper">
                       {item.type}
                     </span>
-                    <span className="text-xs text-neutral-300">
+                    <span className="text-xs text-neutral-500">
                       {item.status}
                     </span>
                   </div>
                   <h3 className="mt-2 flex flex-wrap items-baseline gap-x-3 font-display text-2xl font-extrabold tracking-tight text-neutral-900 sm:text-3xl">
                     {item.name}
-                    <span className="font-sans text-base font-normal text-neutral-400">
+                    <span className="font-sans text-base font-normal text-neutral-500">
                       {item.tagline}
                     </span>
                   </h3>
@@ -101,7 +102,7 @@ export function ProjectsGrid({ items }: { items: ProjectItem[] }) {
 
                 <span
                   aria-hidden
-                  className="relative flex h-11 w-11 flex-none items-center justify-center self-end rounded-full border border-neutral-200 text-neutral-400 transition-all duration-300 group-hover:translate-x-1 group-hover:border-copper group-hover:bg-copper group-hover:text-white sm:self-center"
+                  className="relative flex h-11 w-11 flex-none items-center justify-center self-end rounded-full border border-neutral-200 text-neutral-500 transition-all duration-300 group-hover:translate-x-1 group-hover:border-copper group-hover:bg-copper group-hover:text-white sm:self-center"
                 >
                   →
                 </span>

@@ -4,7 +4,7 @@
     "headline": "Here's what we build.",
     "description": "We don't work off a fixed service list. We build software around how your business already works — starting with what's below."
   },
-  "story": "We started by building websites. A few clients needed more — a way to track stock, work out pricing, and send bills without doing it all by hand. So we built that too. This page shows what we've actually built, and how we think about the next thing.",
+  "story": "We started by building things to fix our own problems, then took that to businesses. We built websites first, and clients who needed more asked for ways to track stock, work out pricing and send bills without doing it by hand. This page shows what we have actually built, and how we think about the next thing.",
   "statement": "We build software that makes your business run smoother, faster, and more organized — built around how you already work.",
   "painPoints": {
     "title": "If any of this sounds familiar, that's the kind of problem we solve.",
@@ -24,7 +24,7 @@
       "icon": "globe",
       "name": "Websites",
       "tagline": "A website built for your business, not a copy-paste template.",
-      "description": "This is where we started, and we still do it — a simple, fast website that actually looks like your business. For a lot of clients, it's also the first step before something bigger."
+      "description": "We still do it — a simple, fast website that actually looks like your business. For a lot of clients, it's also the first step before something bigger."
     },
     {
       "id": "stock-tracking",
@@ -40,7 +40,7 @@
       "icon": "document",
       "name": "Alu360",
       "tagline": "One tool for design, pricing and billing.",
-      "description": "Our first product. It works out what a job needs, turns that into a quote, and creates the bill — all in one place instead of three. Built first for window and door fabricators; the same idea works for any business that quotes and bills for jobs.",
+      "description": "It works out what a job needs, turns that into a quote, and creates the bill — all in one place instead of three. Built first for window and door fabricators; the same idea works for any business that quotes and bills for jobs.",
       "tags": ["Design", "Pricing", "Billing"],
       "href": "/products/alu360"
     }
@@ -100,5 +100,5 @@
       "description": "Before we build anything, we sit with how you work today — then show you a demo, let you trial it, and keep improving until it fits."
     }
   ],
-  "reach": "Working with businesses across Gujarat and Chhattisgarh — from Anand, Vadodara, Jamnagar and Junagadh to Rajkot."
+  "reach": "Based in Gujarat, India. Working with businesses wherever they are."
 }

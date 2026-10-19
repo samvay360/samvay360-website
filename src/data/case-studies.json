@@ -1,0 +1,62 @@
+{
+  "extrusion-inventory": {
+    "overview": "Inventory management built around how an aluminium extrusion unit actually runs: billet stock, die usage and profile output.",
+    "sector": "Aluminium extrusion",
+    "highlights": [
+      "Billet and raw material stock",
+      "Die usage tracking",
+      "Profile output records"
+    ],
+    "challenge": "",
+    "outcome": "",
+    "images": []
+  },
+  "powder-coating-inventory": {
+    "overview": "Coating stock, job batches and colour and finish variants tracked from the extrusion yard through the coating line.",
+    "sector": "Powder coating",
+    "highlights": [
+      "Batch tracking",
+      "Colour and finish variants",
+      "Extrusion yard to coating line"
+    ],
+    "challenge": "",
+    "outcome": "",
+    "images": []
+  },
+  "aluminium-stock-management": {
+    "overview": "An inventory system for aluminium businesses covering materials and hardware, and extrusion bundles, dispatch and stock.",
+    "sector": "Manufacturing",
+    "highlights": [
+      "Code 128 barcode bundles",
+      "Real-time stock deduction",
+      "Role-based access",
+      "Reports"
+    ],
+    "stack": [
+      "Next.js",
+      "Supabase"
+    ],
+    "year": "2024",
+    "challenge": "",
+    "outcome": "",
+    "images": []
+  },
+  "brokersnet": {
+    "overview": "A PropTech platform with backend-driven property listings, interactive map search and advanced filters, delivered as Android and iOS apps and configured from an admin panel.",
+    "sector": "Real estate",
+    "highlights": [
+      "Backend-driven listings",
+      "Interactive map search",
+      "Advanced filters",
+      "Admin-configurable"
+    ],
+    "stack": [
+      "Flutter",
+      "Google Maps"
+    ],
+    "year": "2024",
+    "challenge": "",
+    "outcome": "",
+    "images": []
+  }
+}
