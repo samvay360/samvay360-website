@@ -98,11 +98,37 @@ export default function Home() {
           className="mt-8 font-display text-3xl font-semibold leading-[1.2] tracking-tight sm:text-5xl"
         />
         <Link
-          href="/about"
+          href="/#journey"
           className="mt-10 inline-block font-mono text-xs uppercase tracking-wider hover:text-copper"
         >
-          Read our story →
+          See our journey →
         </Link>
+      </section>
+
+      {/* What the name means */}
+      <section id="name" className="grain relative overflow-hidden bg-ink text-white">
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-6 py-24 sm:py-32 lg:grid-cols-[auto_minmax(0,1fr)] lg:gap-16">
+          <Reveal>
+            <div
+              aria-hidden
+              className="select-none font-devanagari text-[26vw] font-bold leading-none text-copper-light sm:text-[9rem] xl:text-[11rem]"
+            >
+              समवाय
+            </div>
+          </Reveal>
+          <Reveal delay={100}>
+            <span className="label-bracket font-mono text-xs uppercase tracking-widest text-copper-light">
+              What the name means
+            </span>
+            <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
+              <span lang="hi" className="font-devanagari">समवाय</span> (samavāya) means inseparable connection.
+            </h2>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-neutral-300">
+              We pair it with 360° because we aim to stay involved from the
+              first conversation to long after launch.
+            </p>
+          </Reveal>
+        </div>
       </section>
 
       {/* What we've built */}
@@ -115,8 +141,8 @@ export default function Home() {
                 Three real things, not a long service menu.
               </h2>
             </div>
-            <Link href="/solutions" className="font-mono text-xs uppercase tracking-wider hover:text-copper">
-              See how we work →
+            <Link href="/projects" className="font-mono text-xs uppercase tracking-wider hover:text-copper">
+              See our projects →
             </Link>
           </Reveal>
 
@@ -126,7 +152,7 @@ export default function Home() {
               return (
                 <Reveal key={item.id} delay={i * 80}>
                   <Link
-                    href={item.href ?? `/solutions#${item.id}`}
+                    href={item.href ?? "/projects"}
                     className="group flex h-full min-h-72 flex-col justify-between rounded-2xl border border-ink/10 bg-background p-7 transition-all duration-500 hover:-translate-y-1 hover:border-ink hover:bg-ink hover:text-white"
                   >
                     <div className="flex items-start justify-between">
@@ -176,7 +202,7 @@ export default function Home() {
       </section>
 
       {/* Journey */}
-      <section className="border-t border-ink/10 bg-white">
+      <section id="journey" className="border-t border-ink/10 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-28">
           <Reveal className="mx-auto mb-20 max-w-3xl text-center">
             <span className={label}>[ Our journey ]</span>

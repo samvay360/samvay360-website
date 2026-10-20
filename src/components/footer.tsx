@@ -40,19 +40,10 @@ export function Footer() {
               Home
             </Link>
             <Link
-              href="/solutions"
-              className="inline-block py-2 transition-colors duration-300 hover:text-copper"
-            >
-              Solutions
-            </Link>
-            <Link
               href="/projects"
               className="inline-block py-2 transition-colors duration-300 hover:text-copper"
             >
               Projects
-            </Link>
-            <Link href="/about" className="inline-block py-2 transition-colors duration-300 hover:text-copper">
-              About
             </Link>
             <Link href="/contact" className="inline-block py-2 transition-colors duration-300 hover:text-copper">
               Contact
@@ -68,10 +59,10 @@ export function Footer() {
 
         <div className="mt-16 flex flex-col gap-2 border-t border-ink/10 pt-6 text-xs text-neutral-600 sm:flex-row sm:items-center sm:justify-between">
           <span>© {new Date().getFullYear()} Samvay360</span>
-          <span className="flex gap-4">
+          {/* <span className="flex gap-4">
             <Link href="/privacy" className="inline-block py-2 hover:text-copper">Privacy</Link>
             <Link href="/terms" className="inline-block py-2 hover:text-copper">Terms</Link>
-          </span>
+          </span> */}
           <span>Technology that brings business together.</span>
         </div>
       </div>

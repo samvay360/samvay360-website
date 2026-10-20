@@ -107,5 +107,46 @@
     ],
     "href": "https://www.lordaluminium.in/",
     "status": "Live"
+  },
+  {
+    "id": "kb-buildchem",
+    "type": "Website",
+    "name": "KBBuildChem",
+    "tagline": "Construction Chemicals Manufacturer",
+    "description": "Website for a Gujarat-based manufacturer of construction chemicals, presenting eight product categories from tile adhesives to waterproofing, with a downloadable brochure.",
+    "tags": [
+      "Website",
+      "Manufacturing",
+      "Construction"
+    ],
+    "href": "https://www.kbbuildchem.com/",
+    "status": "Live"
+  },
+  {
+    "id": "structonix",
+    "type": "Website",
+    "name": "Structonix",
+    "tagline": "Pre-Engineered Buildings & Turnkey Construction",
+    "description": "Website for a pre-engineered building manufacturer and turnkey industrial construction provider, covering services, featured projects and client testimonials.",
+    "tags": [
+      "Website",
+      "Steel Structures",
+      "Construction"
+    ],
+    "href": "https://www.structonix.net/",
+    "status": "Live"
+  },
+  {
+    "id": "k2k-holidays",
+    "type": "Website",
+    "name": "K2K Holidays",
+    "tagline": "Travel & Tour Planning",
+    "description": "Website for a Mumbai travel company, with India and world destinations, themed packages, adventure activities and customer reviews.",
+    "tags": [
+      "Website",
+      "Travel"
+    ],
+    "href": "https://k2kholidays.in/",
+    "status": "Live"
   }
 ]

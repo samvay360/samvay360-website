@@ -52,7 +52,9 @@ export async function POST(request: Request) {
 
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.CONTACT_FROM_EMAIL;
-  const to = process.env.CONTACT_TO_EMAIL ?? CONTACT_EMAIL;
+  const rawTo = process.env.CONTACT_TO_EMAIL ?? CONTACT_EMAIL;
+
+  const to = rawTo.split(',')
   if (!apiKey || !from) {
     console.error("Contact form: RESEND_API_KEY / CONTACT_FROM_EMAIL not configured");
     return Response.json({ error: "The form is not available right now." }, { status: 503 });
