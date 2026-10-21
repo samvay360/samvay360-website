@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import { Reveal } from "@/components/reveal";
@@ -13,6 +14,8 @@ type ProjectItem = {
   tags: string[];
   href: string;
   status: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 export function ProjectsGrid({ items }: { items: ProjectItem[] }) {
@@ -57,7 +60,7 @@ export function ProjectsGrid({ items }: { items: ProjectItem[] }) {
               <Link
                 href={item.href}
                 {...(item.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="group relative grid grid-cols-[auto_1fr] items-start gap-5 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-copper/40 hover:shadow-xl hover:shadow-copper/10 sm:grid-cols-[5rem_1fr_auto] sm:items-center sm:gap-8 sm:p-8"
+                className="group relative grid grid-cols-[auto_1fr] items-start gap-5 overflow-hidden rounded-2xl border border-neutral-200 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-copper/40 hover:shadow-xl hover:shadow-copper/10 sm:grid-cols-[5rem_1fr_auto_auto] sm:items-center sm:gap-8 sm:p-8"
               >
                 <span
                   aria-hidden
@@ -71,6 +74,11 @@ export function ProjectsGrid({ items }: { items: ProjectItem[] }) {
                 </span>
 
                 <div className="relative min-w-0">
+                  {item.image && (
+                    <div className="relative mb-5 aspect-[16/9] w-full overflow-hidden rounded-xl border border-neutral-200 sm:hidden">
+                      <Image src={item.image} alt={item.imageAlt ?? item.name} fill sizes="100vw" className="object-cover" />
+                    </div>
+                  )}
                   <div className="flex items-center gap-3">
                     <span className="text-xs font-semibold uppercase tracking-wide text-copper">
                       {item.type}
@@ -99,6 +107,12 @@ export function ProjectsGrid({ items }: { items: ProjectItem[] }) {
                     ))}
                   </div>
                 </div>
+
+                {item.image && (
+                  <div className="relative hidden aspect-[16/10] w-56 flex-none overflow-hidden rounded-xl border border-neutral-200 sm:block lg:w-72">
+                    <Image src={item.image} alt={item.imageAlt ?? item.name} fill sizes="288px" className="object-cover transition-transform duration-500 group-hover:scale-105" />
+                  </div>
+                )}
 
                 <span
                   aria-hidden

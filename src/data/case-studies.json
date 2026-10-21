@@ -24,31 +24,101 @@
     "images": []
   },
   "aluminium-stock-management": {
-    "overview": "An inventory system for aluminium businesses covering materials and hardware, and extrusion bundles, dispatch and stock.",
-    "sector": "Manufacturing",
+    "overview": "A production-grade inventory and manufacturing workflow system for aluminium section factories. It digitises the journey from raw aluminium waste to finished section bundles and dispatch, using barcode-driven bundle management and real-time inventory updates.",
+    "sector": "Aluminium manufacturing",
     "highlights": [
-      "Code 128 barcode bundles",
-      "Real-time stock deduction",
-      "Role-based access",
-      "Reports"
+      "Bundle management: create bundles, generate Code 128 barcodes, print and reprint labels, track Produced or Dispatched status",
+      "Inventory: real-time stock, section-wise and bundle-wise tracking, production versus dispatch reconciliation",
+      "Dispatch: dispatch processing, history and date-filtered reports",
+      "Reporting: daily, monthly and custom-range reports with a dashboard of operational KPIs"
     ],
     "stack": [
       "Next.js",
-      "Supabase"
+      "Supabase",
+      "PostgreSQL"
     ],
     "year": "2024",
-    "challenge": "",
+    "challenge": "Factories often track production bundles and dispatch records in manual registers or Excel sheets. That leads to stock mismatches, calculation errors, poor transparency and difficulty tracing where a bundle went. The aim was a structured, reliable and scalable system for accurate stock tracking and operational visibility.",
     "outcome": "",
-    "images": []
+    "images": [
+      {
+        "src": "/projects/aluminium-stock-management/1.jpg",
+        "alt": "Dashboard with stock, bundles and production KPIs",
+        "caption": "Dashboard with stock, bundles and production KPIs"
+      },
+      {
+        "src": "/projects/aluminium-stock-management/2.jpg",
+        "alt": "Create a production bundle and generate its barcode label",
+        "caption": "Create a production bundle and generate its barcode label"
+      },
+      {
+        "src": "/projects/aluminium-stock-management/3.jpg",
+        "alt": "Reprint a bundle label by barcode or bundle number",
+        "caption": "Reprint a bundle label by barcode or bundle number"
+      },
+      {
+        "src": "/projects/aluminium-stock-management/4.jpg",
+        "alt": "Production report with date range and export",
+        "caption": "Production report with date range and export"
+      },
+      {
+        "src": "/projects/aluminium-stock-management/5.jpg",
+        "alt": "Create a new die number",
+        "caption": "Create a new die number"
+      },
+      {
+        "src": "/projects/aluminium-stock-management/6.jpg",
+        "alt": "Settings for backup, restore and database controls",
+        "caption": "Settings for backup, restore and database controls"
+      }
+    ],
+    "workflow": [
+      "Raw aluminium waste intake and processing",
+      "Section production and bundle creation",
+      "Automatic Code 128 barcode generation for each bundle",
+      "Barcode label printing and reprinting",
+      "Dispatch management",
+      "Automatic stock deduction on dispatch",
+      "Real-time inventory tracking",
+      "Production and dispatch reporting"
+    ],
+    "roles": [
+      {
+        "name": "Production user",
+        "text": "Creates and manages bundles."
+      },
+      {
+        "name": "Dispatch user",
+        "text": "Handles dispatch operations."
+      },
+      {
+        "name": "Admin",
+        "text": "Monitors reports and operational data."
+      },
+      {
+        "name": "Super admin",
+        "text": "Full system control, including user management."
+      }
+    ],
+    "outcomes": [
+      "Manual stock calculations eliminated",
+      "Fewer human errors in dispatch tracking",
+      "Better operational transparency across the factory",
+      "Real-time inventory monitoring",
+      "Streamlined production reporting",
+      "Barcode-based traceability in manufacturing"
+    ]
   },
   "brokersnet": {
-    "overview": "A PropTech platform with backend-driven property listings, interactive map search and advanced filters, delivered as Android and iOS apps and configured from an admin panel.",
-    "sector": "Real estate",
+    "overview": "BrokersNet is a real estate marketplace and PropTech platform for property discovery by buyers and brokers, inspired by Housing.com. It combines a configurable backend, map-based search and Android and iOS apps.",
+    "sector": "Real estate listings",
     "highlights": [
-      "Backend-driven listings",
-      "Interactive map search",
-      "Advanced filters",
-      "Admin-configurable"
+      "Backend-driven property listings, with most settings controlled from an admin panel",
+      "Admin control of property registration, listing categories, rent and resale filters, amenities, tags and form fields without code changes",
+      "Interactive map showing available properties",
+      "Filters for location, property type, budget, amenities and more",
+      "Dedicated Rent and Resale views",
+      "Android and iOS apps with a consistent experience"
     ],
     "stack": [
       "Flutter",
@@ -57,6 +127,24 @@
     "year": "2024",
     "challenge": "",
     "outcome": "",
-    "images": []
+    "images": [
+      {
+        "src": "/projects/brokersnet/1.jpg",
+        "alt": "BrokersNet dashboard",
+        "caption": "Broker dashboard with available, rented and sold properties"
+      },
+      {
+        "src": "/projects/brokersnet/2.jpg",
+        "alt": "BrokersNet map search",
+        "caption": "Map search with property pins, type filters and listing preview"
+      }
+    ],
+    "workflow": [
+      "Admins configure the platform through the backend, so markets and brokers can be adapted without code changes",
+      "Users explore properties on an interactive map and narrow results with backend-controlled filters",
+      "Buyers browse Rent and Resale listings; brokers manage listings from their phones"
+    ],
+    "roles": [],
+    "outcomes": []
   }
 }

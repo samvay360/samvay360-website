@@ -6,6 +6,7 @@ import studies from "@/data/case-studies.json";
 import { FadeIn } from "@/components/fade-in";
 import { Reveal } from "@/components/reveal";
 import { BrandRing } from "@/components/brand-ring";
+import { Gallery, type GalleryImage } from "@/components/gallery";
 
 type Study = {
   overview: string;
@@ -15,7 +16,10 @@ type Study = {
   year?: string;
   challenge: string;
   outcome: string;
-  images: string[];
+  workflow?: string[];
+  roles?: { name: string; text: string }[];
+  outcomes?: string[];
+  images: GalleryImage[];
 };
 
 const caseStudies = studies as Record<string, Study>;
@@ -73,7 +77,12 @@ export default async function CaseStudyPage({ params }: PageProps<"/projects/[sl
 
       <section className="bg-white">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 py-16 lg:grid-cols-[1fr_18rem]">
-          <div className="space-y-12">
+          <div className="min-w-0 space-y-12">
+            {study.images.length > 0 && (
+              <Reveal>
+                <Gallery images={study.images} />
+              </Reveal>
+            )}
             <Reveal>
               <h2 className="font-display text-2xl font-extrabold text-neutral-900">Overview</h2>
               <p className="mt-3 max-w-2xl leading-7 text-neutral-600">{study.overview}</p>
@@ -94,14 +103,40 @@ export default async function CaseStudyPage({ params }: PageProps<"/projects/[sl
                 ))}
               </ul>
             </Reveal>
-            {study.images.length > 0 && (
+            {study.workflow && study.workflow.length > 0 && (
               <Reveal>
-                <div className="grid gap-4 sm:grid-cols-2">
-                  {study.images.map((src) => (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img key={src} src={src} alt="" className="rounded-xl border border-neutral-200" />
+                <h2 className="font-display text-2xl font-extrabold text-neutral-900">How it works</h2>
+                <ol className="mt-4 space-y-3">
+                  {study.workflow.map((step, i) => (
+                    <li key={step} className="flex gap-4 text-neutral-600">
+                      <span className="flex h-7 w-7 flex-none items-center justify-center rounded-full bg-copper/10 font-mono text-xs text-copper">{i + 1}</span>
+                      <span className="pt-0.5 leading-7">{step}</span>
+                    </li>
                   ))}
-                </div>
+                </ol>
+              </Reveal>
+            )}
+            {study.roles && study.roles.length > 0 && (
+              <Reveal>
+                <h2 className="font-display text-2xl font-extrabold text-neutral-900">Who uses it</h2>
+                <dl className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {study.roles.map((r) => (
+                    <div key={r.name} className="rounded-xl border border-neutral-200 px-4 py-3">
+                      <dt className="font-semibold text-neutral-900">{r.name}</dt>
+                      <dd className="text-sm text-neutral-600">{r.text}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </Reveal>
+            )}
+            {study.outcomes && study.outcomes.length > 0 && (
+              <Reveal>
+                <h2 className="font-display text-2xl font-extrabold text-neutral-900">Business impact</h2>
+                <ul className="mt-4 space-y-2 text-neutral-600">
+                  {study.outcomes.map((o) => (
+                    <li key={o} className="flex gap-3"><span aria-hidden className="mt-2.5 h-1.5 w-1.5 flex-none rounded-full bg-copper" />{o}</li>
+                  ))}
+                </ul>
               </Reveal>
             )}
             {study.outcome && (

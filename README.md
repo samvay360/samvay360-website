@@ -34,3 +34,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Environment variables
+
+Set these in your hosting settings (or a local `.env`, which is git-ignored):
+
+| Variable | Purpose |
+|---|---|
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | Digits only, with country code. The floating WhatsApp button and the Contact page link stay hidden until this is set. |
+| `RESEND_API_KEY`, `CONTACT_FROM_EMAIL` | Required for the contact form to send email. |
+| `CONTACT_TO_EMAIL` | Optional. Defaults to the address in `src/lib/site.ts`. |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL for sitemap and social previews. |
+| `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Optional. Turns on Plausible analytics. |

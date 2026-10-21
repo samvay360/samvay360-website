@@ -44,7 +44,7 @@
     "type": "Solution",
     "name": "Aluminium Stock Management",
     "tagline": "Production to Dispatch",
-    "description": "Inventory system covering production to dispatch, with Code 128 barcode bundles, real-time stock deduction, role-based access and reports.",
+    "description": "Inventory and dispatch system for aluminium section factories: barcode bundles, real-time stock deduction, role-based access and reports.",
     "tags": [
       "Manufacturing",
       "Barcode Tracking",
@@ -52,7 +52,9 @@
       "Supabase"
     ],
     "href": "/projects/aluminium-stock-management",
-    "status": "2024"
+    "status": "2024",
+    "image": "/projects/aluminium-stock-management/1.jpg",
+    "imageAlt": "Aluminium Stock Management dashboard"
   },
   {
     "id": "brokersnet",
@@ -67,7 +69,9 @@
       "Mobile App"
     ],
     "href": "/projects/brokersnet",
-    "status": "2024"
+    "status": "2024",
+    "image": "/projects/brokersnet/1.jpg",
+    "imageAlt": "BrokersNet app dashboard"
   },
   {
     "id": "safarsetu",
@@ -93,7 +97,9 @@
       "Aluminium"
     ],
     "href": "https://alumsectionrepairs.co.in/",
-    "status": "Live"
+    "status": "Live",
+    "image": "/projects/alum-section-repairs.jpg",
+    "imageAlt": "Alum Section Repairs website homepage"
   },
   {
     "id": "lord-aluminium",
@@ -120,7 +126,9 @@
       "Construction"
     ],
     "href": "https://www.kbbuildchem.com/",
-    "status": "Live"
+    "status": "Live",
+    "image": "/projects/kb-buildchem.jpg",
+    "imageAlt": "KBBuildChem website homepage"
   },
   {
     "id": "structonix",
@@ -134,7 +142,9 @@
       "Construction"
     ],
     "href": "https://www.structonix.net/",
-    "status": "Live"
+    "status": "Live",
+    "image": "/projects/structonix.jpg",
+    "imageAlt": "Structonix website homepage"
   },
   {
     "id": "k2k-holidays",
