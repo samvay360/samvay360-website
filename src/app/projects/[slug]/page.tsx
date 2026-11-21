@@ -4,8 +4,8 @@ import { notFound } from "next/navigation";
 import projects from "@/data/projects.json";
 import studies from "@/data/case-studies.json";
 import { FadeIn } from "@/components/fade-in";
-import { Reveal } from "@/components/reveal";
 import { BrandRing } from "@/components/brand-ring";
+import { Reveal } from "@/components/reveal";
 import { Gallery, type GalleryImage } from "@/components/gallery";
 
 type Study = {
@@ -36,7 +36,7 @@ export async function generateMetadata({
   const project = find(slug);
   if (!project || !caseStudies[slug]) return {};
   return {
-    title: `${project.name} — Samvay360`,
+    title: `${project.name} | Samvay360`,
     description: caseStudies[slug].overview,
     alternates: { canonical: `/projects/${slug}` },
   };
@@ -64,7 +64,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/projects/[sl
             <Link href="/projects" className="font-mono text-xs uppercase tracking-wider text-neutral-500 hover:text-copper">
               ← All projects
             </Link>
-            <p className="mt-6 label-bracket font-mono text-xs uppercase tracking-widest text-copper">
+            <p className="mt-6 font-mono text-xs uppercase tracking-widest text-copper">
               {project.type}
             </p>
             <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">

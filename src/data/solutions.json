@@ -2,47 +2,75 @@
   "hero": {
     "eyebrow": "Solutions",
     "headline": "Here's what we build.",
-    "description": "We don't work off a fixed service list. We build software around how your business already works — starting with what's below."
+    "description": "We don't work off a fixed service list. We build software around how your business already works, starting with what's below."
   },
   "story": "We started by building things to fix our own problems, then took that to businesses. We built websites first, and clients who needed more asked for ways to track stock, work out pricing and send bills without doing it by hand. This page shows what we have actually built, and how we think about the next thing.",
-  "statement": "We build software that makes your business run smoother, faster, and more organized — built around how you already work.",
+  "statement": "We build software around how your business already works, so it runs with less typing, chasing and guesswork.",
   "painPoints": {
     "title": "If any of this sounds familiar, that's the kind of problem we solve.",
     "items": [
       "You're juggling WhatsApp, Excel, and paper just to keep things running.",
       "The same information gets typed into two or three different places.",
-      "Only one person really knows how something works — and things stall when they're away.",
+      "Only one person knows how something works, and things stall when they're away.",
       "Your website hasn't changed in years and doesn't look like your business today.",
-      "There's no single place to see what's actually happening across the business.",
+      "There's no single place to see what's happening across the business.",
       "Something only works because someone remembers to follow up."
     ]
   },
   "built": [
     {
-      "id": "websites",
+      "id": "services",
       "number": "01",
-      "icon": "globe",
-      "name": "Websites",
-      "tagline": "A website built for your business, not a copy-paste template.",
-      "description": "We still do it — a simple, fast website that actually looks like your business. For a lot of clients, it's also the first step before something bigger."
-    },
-    {
-      "id": "stock-tracking",
-      "number": "02",
-      "icon": "box",
-      "name": "Stock & Inventory Tracking",
-      "tagline": "Know what you have and where it is.",
-      "description": "A system that tracks stock as it moves through your business — what's come in, what's been used, and what's left. It started with one manufacturing client, and the same idea works for any business that needs to keep track of stock."
+      "icon": "layers",
+      "name": "Services",
+      "tagline": "Your process, turned into software.",
+      "images": [
+        {
+          "src": "/projects/aluminium-stock-management/1.jpg",
+          "alt": "Stock and dispatch dashboard built for an aluminium factory"
+        },
+        {
+          "src": "/projects/brokersnet/1.jpg",
+          "alt": "BrokersNet real estate app on a phone",
+          "phone": true
+        }
+      ],
+      "cta": "See all services",
+      "href": "/services",
+      "line": "Custom software and ERP, AI-native apps, automations, IoT systems and websites, built around how your team already works.",
+      "tags": [
+        "Custom Software",
+        "AI-Native Apps",
+        "Automations",
+        "IoT + Software",
+        "Websites"
+      ]
     },
     {
       "id": "alu360",
-      "number": "03",
+      "number": "02",
       "icon": "document",
       "name": "Alu360",
-      "tagline": "One tool for design, pricing and billing.",
-      "description": "It works out what a job needs, turns that into a quote, and creates the bill — all in one place instead of three. Built first for window and door fabricators; the same idea works for any business that quotes and bills for jobs.",
-      "tags": ["Design", "Pricing", "Billing"],
-      "href": "/products/alu360"
+      "tagline": "Design, pricing and billing in one tool.",
+      "href": "/products/alu360",
+      "flow": [
+        "Window size",
+        "Material & cutting plan",
+        "Quotation",
+        "GST invoice"
+      ],
+      "cta": "Explore Alu360",
+      "line": "For aluminium window and door fabricators. Enter a window size once and get material, cutting plan, quote and GST invoice."
+    },
+    {
+      "id": "safarsetu",
+      "number": "03",
+      "icon": "globe",
+      "name": "SafarSetu",
+      "tagline": "Trip organising app.",
+      "line": "Our own app for organising trips, in open testing on Google Play since March 2026.",
+      "href": "https://play.google.com/store/apps/details?id=com.safarsetu.app",
+      "cta": "Try it on Google Play"
     }
   ],
   "capabilities": [
@@ -50,7 +78,7 @@
       "id": "automation",
       "icon": "flow",
       "name": "Automating manual work",
-      "description": "If a task only happens because someone remembers to follow up — approvals, reminders, weekly reports — we can build something that does it instead."
+      "description": "If a task only happens because someone remembers to follow up (approvals, reminders, weekly reports), we can build something that does it instead."
     },
     {
       "id": "custom",
@@ -63,41 +91,41 @@
     {
       "number": "01",
       "title": "Coordination",
-      "description": "We start by understanding how you actually work — not by pitching a template."
+      "description": "We sit with your team and see how the work moves today, from first order to dispatch."
     },
     {
       "number": "02",
       "title": "Demo",
-      "description": "We show you a working version built around your process, not a generic mockup."
+      "description": "You see a working version of your own process, with your products and your terms."
     },
     {
       "number": "03",
       "title": "Trial",
-      "description": "You use it in your real operations before committing to anything."
+      "description": "Your team uses it in real operations before you commit to anything."
     },
     {
       "number": "04",
       "title": "Iterate",
-      "description": "We keep refining until it fits the way you actually work — until you're satisfied."
+      "description": "We adjust it based on what your team runs into, until it fits."
     },
     {
       "number": "05",
       "title": "Stay connected",
-      "description": "We keep asking for feedback after launch. It doesn't end at delivery."
+      "description": "After launch we keep checking in, fixing issues and adding what's missing."
     }
   ],
   "whyUs": [
     {
-      "title": "We don't disappear after launch",
-      "description": "We keep coming back to check in, fix things, and add what's missing."
+      "title": "We stay after launch",
+      "description": "We check in, fix issues and add what's missing for as long as you use it."
     },
     {
-      "title": "We build one thing well, not everything at once",
-      "description": "Every business tracks stock or sends quotes a little differently. We build around how you actually do it."
+      "title": "One thing at a time",
+      "description": "We build the part that hurts most first, get it into daily use, then add the next."
     },
     {
       "title": "We start by listening",
-      "description": "Before we build anything, we sit with how you work today — then show you a demo, let you trial it, and keep improving until it fits."
+      "description": "Before we build anything, we see how you work today. Then a demo, a trial, and changes until it fits."
     }
   ],
   "reach": "Based in Gujarat, India. Working with businesses wherever they are."

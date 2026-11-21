@@ -40,6 +40,12 @@ export function Footer() {
               Home
             </Link>
             <Link
+              href="/services"
+              className="inline-block py-2 transition-colors duration-300 hover:text-copper"
+            >
+              Services
+            </Link>
+            <Link
               href="/projects"
               className="inline-block py-2 transition-colors duration-300 hover:text-copper"
             >
@@ -49,10 +55,10 @@ export function Footer() {
               Contact
             </Link>
             <Link
-              href="/products/alu360"
+              href="/products"
               className="inline-block py-2 transition-colors duration-300 hover:text-copper"
             >
-              Alu360
+              Products
             </Link>
           </nav>
         </Reveal>

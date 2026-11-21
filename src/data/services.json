@@ -1,0 +1,137 @@
+{
+  "seo": {
+    "title": "Services: Custom Software, AI-Native Apps, Automation, IoT & Websites | Samvay360",
+    "description": "Samvay360 builds custom software and ERP, AI-native apps, business automations, IoT systems and websites around how your business already works. Based in Gujarat, India, working with businesses anywhere.",
+    "keywords": [
+      "custom software development Gujarat",
+      "custom ERP development",
+      "AI app development",
+      "AI-native apps",
+      "business process automation",
+      "WhatsApp automation for business",
+      "IoT software development",
+      "IoT dashboard development",
+      "website development Gujarat",
+      "software development company India"
+    ]
+  },
+  "hero": {
+    "eyebrow": "Services",
+    "title": "Five ways we turn how you work into software.",
+    "description": "Each project starts with how your team works today. We pick the right mix from the list below, show you a working demo, and keep improving it after launch."
+  },
+  "services": [
+    {
+      "id": "custom-software",
+      "icon": "layers",
+      "name": "Custom Software",
+      "tagline": "ERP and business systems shaped around your process.",
+      "summary": "For businesses that have outgrown Excel, WhatsApp groups and paper registers. We build the screens, steps and reports your team already thinks in.",
+      "points": [
+        "ERP modules for orders, purchase, production, stock, dispatch and accounts",
+        "Inventory and dispatch tracking with barcode labels and scanning",
+        "Role-based access for owners, supervisors and staff",
+        "Web apps, mobile apps and admin panels"
+      ],
+      "examples": [
+        { "name": "Aluminium Stock Management", "href": "/projects/aluminium-stock-management" },
+        { "name": "Extrusion Inventory", "href": "/projects/extrusion-inventory" },
+        { "name": "BrokersNet", "href": "/projects/brokersnet" }
+      ],
+      "images": [
+        { "src": "/projects/aluminium-stock-management/1.jpg", "alt": "Stock and dispatch dashboard built for an aluminium factory" },
+        { "src": "/projects/brokersnet/1.jpg", "alt": "BrokersNet real estate app", "phone": true }
+      ]
+    },
+    {
+      "id": "ai-native-apps",
+      "icon": "spark",
+      "name": "AI-Native Apps",
+      "tagline": "Apps where AI does the core work.",
+      "summary": "Software designed around what AI is good at: reading documents, understanding questions and drafting replies. Your team checks the result instead of typing it.",
+      "points": [
+        "Bills, challans and invoices read from a photo into the system",
+        "Assistants that answer questions from your own records",
+        "Plain-language search across files, orders and chats",
+        "AI drafts for quotes, replies and reports, approved by a person"
+      ],
+      "flow": ["Photo of a bill", "AI reads the fields", "You check it", "Saved to your system"]
+    },
+    {
+      "id": "automations",
+      "icon": "flow",
+      "name": "Automations",
+      "tagline": "The follow-ups nobody has to remember.",
+      "summary": "If a task only happens because someone remembers it, the system can do it instead: approvals, reminders, updates and reports.",
+      "points": [
+        "WhatsApp and email alerts when an order, payment or stock level changes",
+        "Approval steps that move on their own",
+        "Daily and weekly reports sent automatically",
+        "Data kept in sync between the tools you already use"
+      ],
+      "flow": ["New order", "Team notified on WhatsApp", "Stock updated", "Evening report sent"]
+    },
+    {
+      "id": "iot",
+      "icon": "chip",
+      "name": "IoT + Software",
+      "tagline": "Machines and sensors you can see on your phone.",
+      "summary": "We connect devices and sensors to a dashboard and app, so you see what is happening on the floor without walking to it. IoT is where we started: our first builds were a home security camera and a hands-free remote.",
+      "points": [
+        "Live machine and sensor readings on a dashboard",
+        "Alerts when a value goes out of range",
+        "Camera and security systems connected to an app",
+        "Hardware prototypes with the software to run them"
+      ],
+      "flow": ["Sensor or machine", "Device sends data", "Cloud dashboard", "Alert on your phone"]
+    },
+    {
+      "id": "websites",
+      "icon": "globe",
+      "name": "Websites",
+      "tagline": "Fast, custom websites that bring in enquiries.",
+      "summary": "For manufacturers, traders and service businesses that need to look credible online. Often the first step before something bigger.",
+      "points": [
+        "Custom design built around your products and services",
+        "Catalogues, brochure downloads and enquiry forms that reach you on WhatsApp or email",
+        "Fast on mobile and set up for Google search",
+        "Changes and updates after launch"
+      ],
+      "examples": [
+        { "name": "KBBuildChem", "href": "https://www.kbbuildchem.com/" },
+        { "name": "Structonix", "href": "https://www.structonix.net/" },
+        { "name": "Alum Section Repairs", "href": "https://alumsectionrepairs.co.in/" }
+      ],
+      "images": [
+        { "src": "/projects/kb-buildchem.jpg", "alt": "KBBuildChem website homepage" },
+        { "src": "/projects/structonix.jpg", "alt": "Structonix website homepage" }
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "What is the difference between custom software and a ready-made ERP?",
+      "a": "A ready-made ERP gives every business the same screens and steps. Custom software is built around your own process, so your team keeps working the way it already does, and you only pay for the parts you use."
+    },
+    {
+      "q": "What is an AI-native app?",
+      "a": "An app where AI does part of the core work, such as reading a bill, answering a question from your records or drafting a quote, and a person checks the result. We show it working on your own data in the demo before you decide."
+    },
+    {
+      "q": "What kind of tasks can you automate?",
+      "a": "Anything that follows a rule and relies on someone remembering it: reminders, approvals, WhatsApp or email alerts, status updates and regular reports."
+    },
+    {
+      "q": "Can you connect our machines or sensors to software?",
+      "a": "Yes. We connect devices and sensors to a dashboard and app, with alerts when something needs attention. Tell us what equipment you have and we will suggest how to connect it."
+    },
+    {
+      "q": "Do we have to replace the tools we already use?",
+      "a": "No. We can connect to what you already have, or replace one piece at a time."
+    },
+    {
+      "q": "How do we start?",
+      "a": "Tell us how the work flows today. We listen, show you a working demo built around your process, and you trial it before committing."
+    }
+  ]
+}

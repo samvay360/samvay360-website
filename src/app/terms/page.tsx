@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CONTACT_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Terms of Use — Samvay360",
+  title: "Terms of Use | Samvay360",
   robots: { index: true, follow: true },
   alternates: { canonical: "/terms" },
 };

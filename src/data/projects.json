@@ -4,7 +4,7 @@
     "type": "Product",
     "name": "Alu360",
     "tagline": "Aluminium Calculator, Quotes & Invoices",
-    "description": "Started as a way to speed up one client's quoting — now a maintained product used by window and door fabricators end to end. Full details on the product page.",
+    "description": "Started as a way to speed up one client's quoting. Now a maintained product that window and door fabricators use from design to GST invoice. Full details on the product page.",
     "tags": [
       "Aluminium Fabrication",
       "Calculator",
@@ -18,7 +18,7 @@
     "type": "Solution",
     "name": "Extrusion Inventory",
     "tagline": "Raw Material & Production Stock Tracking",
-    "description": "Inventory management built around how an aluminium extrusion unit actually runs — billet stock, die usage and profile output.",
+    "description": "Inventory for an aluminium extrusion unit: billet stock, die usage and profile output.",
     "tags": [
       "Extrusion",
       "Raw Material Tracking"

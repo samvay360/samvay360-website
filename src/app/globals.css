@@ -31,17 +31,6 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Subtle film-grain texture for depth on flat sections */
-.grain::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.05;
-  mix-blend-mode: overlay;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='140' height='140'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-}
-
 /* Faint dot grid for texture on light sections */
 .dot-grid {
   background-image: radial-gradient(
@@ -70,6 +59,63 @@ html {
   animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
+@keyframes img-in {
+  from {
+    opacity: 0;
+    transform: scale(1.015);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* View transitions are only used for the projects filter. Keep the rest
+   of the document and the header still while it runs. */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+}
+.site-header {
+  view-transition-name: site-header;
+}
+::view-transition-group(site-header),
+::view-transition-old(site-header),
+::view-transition-new(site-header) {
+  animation: none;
+}
+::view-transition-old(site-header) {
+  display: none;
+}
+@keyframes vt-fade-out {
+  to {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+}
+@keyframes vt-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+/* Page change: the new page's content fades up (app/template.tsx) */
+.page-in {
+  animation: vt-fade-in 420ms cubic-bezier(0.16, 1, 0.3, 1) backwards;
+}
+
+/* Project filter: cards fade out/in and slide to their new place */
+::view-transition-old(.list-exit) {
+  animation: vt-fade-out 200ms ease-in both;
+}
+::view-transition-new(.list-enter) {
+  animation: vt-fade-in 320ms cubic-bezier(0.16, 1, 0.3, 1) 60ms both;
+}
+::view-transition-group(.list-move) {
+  animation-duration: 380ms;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
 @keyframes brand-spin {
   from {
     transform: rotate(0deg);
@@ -94,6 +140,15 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   .marquee-track,
+  .page-in {
+    animation: none;
+  }
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+
   .animate-bounce {
     animation: none !important;
   }
@@ -114,9 +169,3 @@ html {
   border-radius: 4px;
 }
 
-.label-bracket::before {
-  content: "[ ";
-}
-.label-bracket::after {
-  content: " ]";
-}

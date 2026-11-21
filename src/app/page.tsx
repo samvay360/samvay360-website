@@ -1,10 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import { BrandRing } from "@/components/brand-ring";
 import { Marquee } from "@/components/marquee";
 import { Reveal } from "@/components/reveal";
-import { FadeIn } from "@/components/fade-in";
 import { WordReveal } from "@/components/word-reveal";
-import { IconBox, IconDocument, IconGlobe } from "@/components/icons";
+import { FadeIn } from "@/components/fade-in";
+import { IconBox, IconDocument, IconGlobe, IconLayers } from "@/components/icons";
 import { Journey } from "@/components/journey";
 import { Testimonials } from "@/components/testimonials";
 import { Faq } from "@/components/faq";
@@ -15,6 +16,7 @@ const iconMap = {
   box: IconBox,
   document: IconDocument,
   globe: IconGlobe,
+  layers: IconLayers,
 };
 
 const builtFor = [
@@ -23,12 +25,16 @@ const builtFor = [
   "Powder coating",
   "Manufacturing",
   "Real estate",
+  "Custom software & ERP",
+  "AI-native apps",
+  "Automations",
+  "IoT",
   "Websites",
   "Quotations & invoicing",
 ];
 
 const manifesto =
-  "We design software around how your business actually operates. Websites came first. Stock tracking and Alu360 followed, one client's problem at a time. Not a vendor you hand a brief to, but a team you stay connected to.";
+  "We design software around how your business already runs. Websites came first. Custom software, AI, IoT and Alu360 followed, one client's problem at a time. We stay in touch long after launch.";
 
 const label = "font-mono text-xs uppercase tracking-widest text-copper";
 
@@ -36,51 +42,75 @@ export default function Home() {
   return (
     <div className="bg-background text-ink">
       {/* Hero */}
-      <section className="dot-grid relative flex min-h-screen flex-col overflow-hidden pt-28 sm:pt-32">
+      <section className="dot-grid relative overflow-hidden pt-28 sm:pt-36">
         <BrandRing className="pointer-events-none absolute -right-40 -top-40 h-[34rem] w-[34rem] opacity-40" />
-
-        <div className="relative mx-auto w-full max-w-6xl px-6">
-          <FadeIn>
-            <p className={label}>[ Software &amp; product solutions · Gujarat, India ]</p>
-          </FadeIn>
-          <FadeIn delay={80}>
-            <h1 className="mt-5 max-w-3xl font-display text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-7xl">
-              Software for how{" "}
-              <span className="text-copper">you already work.</span>
-            </h1>
-          </FadeIn>
-          <FadeIn delay={160}>
-            <p className="mt-6 max-w-md text-lg text-neutral-600">
-              We build the tools your business runs on, and the products that
-              come from building so many of them.
-            </p>
-          </FadeIn>
-          <FadeIn delay={240}>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
-              <Link
-                href="/projects"
-                className="rounded-lg bg-ink px-6 py-3.5 font-mono text-xs uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-copper"
-              >
-                See our work
-              </Link>
-              <Link
-                href="/contact"
-                className="rounded-lg border border-ink/20 px-6 py-3.5 font-mono text-xs uppercase tracking-wider transition-colors duration-300 hover:border-copper hover:text-copper"
-              >
-                Talk to us
-              </Link>
-            </div>
-          </FadeIn>
-        </div>
 
         {/* Hindi wordmark: full-width watermark behind the hero content */}
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-x-0 bottom-20 select-none whitespace-nowrap text-center font-devanagari text-[32vw] font-bold leading-[0.95] text-ink/[0.06]"
+          className="pointer-events-none absolute inset-x-0 bottom-16 select-none whitespace-nowrap text-center font-devanagari text-[32vw] font-bold leading-[0.95] text-ink/[0.06]"
         >
           समवाय
         </div>
-        <div className="flex-1" />
+        <div className="relative mx-auto grid w-full max-w-6xl items-center gap-12 px-6 pb-16 lg:grid-cols-[1.05fr_1fr] lg:pb-24">
+          <div>
+            <FadeIn>
+              <p className={label}>Software &amp; product studio · Gujarat, India</p>
+            </FadeIn>
+            <FadeIn delay={80}>
+              <h1 className="mt-5 max-w-3xl font-display text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl xl:text-7xl">
+                Software for how{" "}
+                <span className="text-copper">you already work.</span>
+              </h1>
+            </FadeIn>
+            <FadeIn delay={160}>
+              <p className="mt-6 max-w-lg text-lg leading-8 text-neutral-600">
+                Custom software, AI-native apps, automations, IoT and websites
+                for growing businesses. Plus Alu360, our product for aluminium
+                fabricators.
+              </p>
+            </FadeIn>
+            <FadeIn delay={240}>
+              <div className="mt-8 flex flex-wrap items-center gap-4">
+                <Link
+                  href="/projects"
+                  className="rounded-lg bg-ink px-6 py-3.5 font-mono text-xs uppercase tracking-wider text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-copper"
+                >
+                  See our work
+                </Link>
+                <Link
+                  href="/contact"
+                  className="rounded-lg border border-ink/20 px-6 py-3.5 font-mono text-xs uppercase tracking-wider transition-colors duration-300 hover:border-copper hover:text-copper"
+                >
+                  Talk to us
+                </Link>
+              </div>
+            </FadeIn>
+          </div>
+
+          <FadeIn delay={200}>
+            <figure>
+              <div className="relative pb-8 pr-8 sm:pr-12">
+                <div className="relative aspect-[16/10] overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-2xl shadow-ink/10">
+                  <Image
+                    src="/projects/aluminium-stock-management/1.jpg"
+                    alt="Stock and dispatch dashboard we built for an aluminium factory"
+                    fill
+                    priority
+                    sizes="(min-width: 1024px) 560px, 100vw"
+                    className="object-cover object-left-top"
+                  />
+                </div>
+                <div className="absolute bottom-0 right-0 aspect-[9/19] w-[26%] overflow-hidden rounded-[1.2rem] border-4 border-ink bg-white shadow-2xl shadow-ink/30">
+                  <Image src="/projects/brokersnet/1.jpg" alt="BrokersNet real estate app" fill sizes="160px" className="object-cover object-top" />
+                </div>
+              </div>
+              <figcaption className="mt-4 font-mono text-[11px] uppercase tracking-widest text-neutral-500">
+                Live client work: factory stock system and real estate app
+              </figcaption>
+            </figure>
+          </FadeIn>
+        </div>
 
         <div className="relative border-y border-ink/10 bg-white/60 py-4">
           <p className="mb-3 text-center font-mono text-[11px] uppercase tracking-widest text-neutral-400">
@@ -90,9 +120,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Manifesto: words light up as you scroll */}
+      {/* Manifesto */}
       <section className="mx-auto max-w-5xl px-6 py-28 sm:py-40">
-        <span className={label}>[ Who we are ]</span>
+        <span className={label}>Who we are</span>
         <WordReveal
           text={manifesto}
           className="mt-8 font-display text-3xl font-semibold leading-[1.2] tracking-tight sm:text-5xl"
@@ -106,7 +136,7 @@ export default function Home() {
       </section>
 
       {/* What the name means */}
-      <section id="name" className="grain relative overflow-hidden bg-ink text-white">
+      <section id="name" className="relative overflow-hidden bg-ink text-white">
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-6 py-24 sm:py-32 lg:grid-cols-[auto_minmax(0,1fr)] lg:gap-16">
           <Reveal>
             <div
@@ -117,7 +147,7 @@ export default function Home() {
             </div>
           </Reveal>
           <Reveal delay={100}>
-            <span className="label-bracket font-mono text-xs uppercase tracking-widest text-copper-light">
+            <span className="font-mono text-xs uppercase tracking-widest text-copper-light">
               What the name means
             </span>
             <h2 className="mt-4 font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-5xl">
@@ -132,44 +162,54 @@ export default function Home() {
       </section>
 
       {/* What we've built */}
-      <section className="border-t border-ink/10 bg-white">
+      <section id="what-we-build" className="border-t border-ink/10 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <Reveal className="flex flex-wrap items-end justify-between gap-6">
             <div>
-              <span className={label}>[ What we&apos;ve built ]</span>
-              <h2 className="mt-3 max-w-lg font-display text-4xl font-extrabold tracking-tight">
-                Three real things, not a long service menu.
+              <h2 className="max-w-xl font-display text-4xl font-extrabold tracking-tight">
+                Services for your business. Products for your trade.
               </h2>
             </div>
-            <Link href="/projects" className="font-mono text-xs uppercase tracking-wider hover:text-copper">
-              See our projects →
+            <Link href="/projects" className="font-mono text-xs uppercase tracking-wider transition-colors hover:text-copper">
+              See all projects →
             </Link>
           </Reveal>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-3">
+          <div className="mt-12 grid gap-5 lg:grid-cols-2">
             {solutions.built.map((item, i) => {
               const Icon = iconMap[item.icon as keyof typeof iconMap];
+              const featured = i === 0;
               return (
-                <Reveal key={item.id} delay={i * 80}>
+                <Reveal key={item.id} delay={i * 80} className={featured ? "lg:col-span-2" : undefined}>
                   <Link
-                    href={item.href ?? "/projects"}
-                    className="group flex h-full min-h-72 flex-col justify-between rounded-2xl border border-ink/10 bg-background p-7 transition-all duration-500 hover:-translate-y-1 hover:border-ink hover:bg-ink hover:text-white"
+                    href={item.href}
+                    {...(item.href.startsWith("http") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className={`group grid h-full gap-8 overflow-hidden rounded-2xl border border-ink/10 bg-background p-7 transition-all duration-500 hover:-translate-y-1 hover:border-copper/50 hover:shadow-xl hover:shadow-copper/10 sm:p-8 ${
+                      featured ? "lg:grid-cols-[1fr_1.1fr] lg:items-center" : ""
+                    }`}
                   >
-                    <div className="flex items-start justify-between">
-                      <span className="font-mono text-xs text-neutral-500 group-hover:text-copper-light">
-                        0{i + 1}
-                      </span>
-                      <Icon className="h-6 w-6 text-copper transition-colors group-hover:text-copper-light" />
-                    </div>
                     <div>
-                      <h3 className="font-display text-2xl font-extrabold tracking-tight">{item.name}</h3>
-                      <p className="mt-2 text-sm leading-6 text-neutral-600 group-hover:text-neutral-300">
-                        {item.tagline}
-                      </p>
-                      <span className="mt-5 inline-block font-mono text-xs uppercase tracking-wider text-copper transition-transform duration-300 group-hover:translate-x-1 group-hover:text-copper-light">
-                        Explore →
+                      <Icon className="h-6 w-6 text-copper" />
+                      <h3 className={`mt-4 font-display font-extrabold tracking-tight ${featured ? "text-3xl sm:text-4xl" : "text-2xl sm:text-3xl"}`}>
+                        {item.name}
+                      </h3>
+                      <p className="mt-2 text-lg font-medium text-ink/80">{item.tagline}</p>
+                      <p className="mt-3 max-w-md text-sm leading-6 text-neutral-600">{item.line}</p>
+                      {"tags" in item && item.tags && (
+                        <ul className="mt-5 flex flex-wrap gap-2">
+                          {item.tags.map((t) => (
+                            <li key={t} className="rounded-full border border-ink/10 bg-white px-3 py-1 text-xs font-medium text-neutral-700 transition-colors duration-300 group-hover:border-copper/30">
+                              {t}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                      <span className="mt-6 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-copper">
+                        {item.cta}
+                        <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">→</span>
                       </span>
                     </div>
+                    <OfferingVisual item={item} />
                   </Link>
                 </Reveal>
               );
@@ -182,9 +222,8 @@ export default function Home() {
       <section className="border-t border-ink/10">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <Reveal>
-            <span className={label}>[ How we work ]</span>
-            <h2 className="mt-3 max-w-lg font-display text-4xl font-extrabold tracking-tight">
-              Listen, show, trial, refine.
+            <h2 className="max-w-xl font-display text-4xl font-extrabold tracking-tight">
+              From first call to a demo built on your process.
             </h2>
           </Reveal>
           <ol className="mt-12 grid border-y border-ink/10 sm:grid-cols-2 lg:grid-cols-5 lg:divide-x lg:divide-ink/10">
@@ -205,9 +244,8 @@ export default function Home() {
       <section id="journey" className="border-t border-ink/10 bg-white">
         <div className="mx-auto max-w-6xl px-6 py-28">
           <Reveal className="mx-auto mb-20 max-w-3xl text-center">
-            <span className={label}>[ Our journey ]</span>
-            <h2 className="mt-4 font-display text-4xl font-extrabold tracking-tight sm:text-6xl">
-              From websites to products, one client at a time.
+            <h2 className="font-display text-4xl font-extrabold tracking-tight sm:text-6xl">
+              How we got here.
             </h2>
             <p className="mt-5 text-lg text-neutral-600">
               Every product we make started as a problem someone brought to us.
@@ -224,8 +262,7 @@ export default function Home() {
             {solutions.whyUs.map((item, i) => (
               <Reveal key={item.title} delay={i * 60}>
                 <div className="h-full rounded-2xl border border-ink/10 bg-white p-7 transition-colors duration-300 hover:border-copper/60">
-                  <span className="font-mono text-xs text-copper">0{i + 1}</span>
-                  <h3 className="mt-5 font-display text-xl font-extrabold tracking-tight">{item.title}</h3>
+                  <h3 className="font-display text-xl font-extrabold tracking-tight">{item.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-neutral-600">{item.description}</p>
                 </div>
               </Reveal>
@@ -245,14 +282,69 @@ export default function Home() {
       <section className="border-t border-ink/10 bg-white">
         <div className="mx-auto max-w-3xl px-6 py-24">
           <Reveal>
-            <span className={label}>[ FAQ ]</span>
-            <h2 className="mb-8 mt-3 font-display text-4xl font-extrabold tracking-tight">
+            <h2 className="mb-8 font-display text-4xl font-extrabold tracking-tight">
               Questions we usually get.
             </h2>
           </Reveal>
           <Faq items={faq} />
         </div>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: faq.map((f) => ({
+                "@type": "Question",
+                name: f.q,
+                acceptedAnswer: { "@type": "Answer", text: f.a },
+              })),
+            }),
+          }}
+        />
       </section>
+    </div>
+  );
+}
+
+type Offering = (typeof solutions.built)[number];
+
+function OfferingVisual({ item }: { item: Offering }) {
+  if ("flow" in item && item.flow) {
+    return (
+      <ol className="flex flex-wrap items-center gap-2 self-end">
+        {item.flow.map((step, i) => (
+          <li key={step} className="flex items-center gap-2">
+            <span className="rounded-lg border border-ink/10 bg-white px-3 py-2 text-xs font-semibold shadow-sm transition-colors duration-300 group-hover:border-copper/30">
+              {step}
+            </span>
+            {i < item.flow.length - 1 && <span aria-hidden className="text-copper">→</span>}
+          </li>
+        ))}
+      </ol>
+    );
+  }
+
+  const images = ("images" in item ? item.images : []) as { src: string; alt: string; phone?: boolean }[];
+  if (images.length === 0) return null;
+  const [main, second] = images;
+
+  return (
+    <div className={`relative ${second?.phone ? "pb-6 pr-6 sm:pr-10" : ""}`}>
+      <div className="relative aspect-[16/9] overflow-hidden rounded-xl border border-ink/10 bg-neutral-100 shadow-lg shadow-ink/5">
+        <Image
+          src={main.src}
+          alt={main.alt}
+          fill
+          sizes="(min-width: 1024px) 560px, 100vw"
+          className="object-cover object-left-top transition-transform duration-700 group-hover:scale-[1.03]"
+        />
+      </div>
+      {second?.phone && (
+        <div className="absolute bottom-0 right-0 aspect-[9/19] w-[24%] overflow-hidden rounded-[1.1rem] border-4 border-ink bg-neutral-100 shadow-2xl shadow-ink/30 transition-transform duration-500 group-hover:-translate-y-1">
+          <Image src={second.src} alt={second.alt} fill sizes="160px" className="object-cover object-top" />
+        </div>
+      )}
     </div>
   );
 }
