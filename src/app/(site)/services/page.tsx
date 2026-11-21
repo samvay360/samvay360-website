@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import data from "@/data/services.json";
-import solutions from "@/data/solutions.json";
+import { getHome, getServicesPage, type ServicesPageContent, type Service } from "@/lib/content";
 import { FadeIn } from "@/components/fade-in";
 import { BrandRing } from "@/components/brand-ring";
 import { Reveal } from "@/components/reveal";
@@ -10,31 +9,16 @@ import { Faq } from "@/components/faq";
 import { IconChip, IconFlow, IconGlobe, IconLayers, IconSpark } from "@/components/icons";
 import { SITE_URL } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: data.seo.title,
-  description: data.seo.description,
-  keywords: data.seo.keywords,
-  alternates: { canonical: "/services" },
-  openGraph: {
-    title: "Services | Samvay360",
-    description: data.seo.description,
-    url: "/services",
-  },
-};
-
-type Service = {
-  id: string;
-  icon: string;
-  name: string;
-  tagline: string;
-  summary: string;
-  points: string[];
-  examples?: { name: string; href: string }[];
-  images?: { src: string; alt: string; phone?: boolean }[];
-  flow?: string[];
-};
-
-const services = data.services as Service[];
+export async function generateMetadata(): Promise<Metadata> {
+  const { seo } = await getServicesPage();
+  return {
+    title: seo.title,
+    description: seo.description,
+    keywords: seo.keywords,
+    alternates: { canonical: "/services" },
+    openGraph: { title: "Services | Samvay360", description: seo.description, url: "/services" },
+  };
+}
 
 const iconMap = {
   layers: IconLayers,
@@ -46,7 +30,8 @@ const iconMap = {
 
 const label = "font-mono text-xs uppercase tracking-widest text-copper";
 
-const jsonLd = [
+function buildJsonLd({ services, faq }: ServicesPageContent) {
+  return [
   {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -67,13 +52,14 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: data.faq.map((f) => ({
+    mainEntity: faq.map((f) => ({
       "@type": "Question",
       name: f.q,
       acceptedAnswer: { "@type": "Answer", text: f.a },
     })),
   },
 ];
+}
 
 function ServiceVisual({ service }: { service: Service }) {
   if (service.flow) {
@@ -119,7 +105,11 @@ function ServiceVisual({ service }: { service: Service }) {
   );
 }
 
-export default function ServicesPage() {
+export default async function ServicesPage() {
+  const [data, home] = await Promise.all([getServicesPage(), getHome()]);
+  const { services } = data;
+  const jsonLd = buildJsonLd(data);
+
   return (
     <div className="bg-background text-ink">
       {/* Hero */}
@@ -210,7 +200,7 @@ export default function ServicesPage() {
             <h2 className="font-display text-3xl font-extrabold tracking-tight sm:text-4xl">How a project runs</h2>
           </Reveal>
           <ol className="mt-10 grid border-y border-ink/10 sm:grid-cols-2 lg:grid-cols-5 lg:divide-x lg:divide-ink/10">
-            {solutions.process.map((step, i) => (
+            {home.process.map((step, i) => (
               <Reveal key={step.number} delay={i * 60}>
                 <li className="h-full list-none border-b border-ink/10 p-6 last:border-b-0 sm:border-b-0">
                   <span className="font-mono text-xs text-copper">{step.number}</span>

@@ -9,8 +9,7 @@ import { IconBox, IconDocument, IconGlobe, IconLayers } from "@/components/icons
 import { Journey } from "@/components/journey";
 import { Testimonials } from "@/components/testimonials";
 import { Faq } from "@/components/faq";
-import solutions from "@/data/solutions.json";
-import faq from "@/data/faq.json";
+import { getFaq, getHome, type HomeCard } from "@/lib/content";
 
 const iconMap = {
   box: IconBox,
@@ -19,26 +18,11 @@ const iconMap = {
   layers: IconLayers,
 };
 
-const builtFor = [
-  "Aluminium fabrication",
-  "Extrusion",
-  "Powder coating",
-  "Manufacturing",
-  "Real estate",
-  "Custom software & ERP",
-  "AI-native apps",
-  "Automations",
-  "IoT",
-  "Websites",
-  "Quotations & invoicing",
-];
-
-const manifesto =
-  "We design software around how your business already runs. Websites came first. Custom software, AI, IoT and Alu360 followed, one client's problem at a time. We stay in touch long after launch.";
-
 const label = "font-mono text-xs uppercase tracking-widest text-copper";
 
-export default function Home() {
+export default async function Home() {
+  const [home, faq] = await Promise.all([getHome(), getFaq("home")]);
+
   return (
     <div className="bg-background text-ink">
       {/* Hero */}
@@ -116,7 +100,7 @@ export default function Home() {
           <p className="mb-3 text-center font-mono text-[11px] uppercase tracking-widest text-neutral-400">
             Built for
           </p>
-          <Marquee items={builtFor} light />
+          <Marquee items={home.builtFor} light />
         </div>
       </section>
 
@@ -124,7 +108,7 @@ export default function Home() {
       <section className="mx-auto max-w-5xl px-6 py-28 sm:py-40">
         <span className={label}>Who we are</span>
         <WordReveal
-          text={manifesto}
+          text={home.manifesto}
           className="mt-8 font-display text-3xl font-semibold leading-[1.2] tracking-tight sm:text-5xl"
         />
         <Link
@@ -176,7 +160,7 @@ export default function Home() {
           </Reveal>
 
           <div className="mt-12 grid gap-5 lg:grid-cols-2">
-            {solutions.built.map((item, i) => {
+            {home.built.map((item, i) => {
               const Icon = iconMap[item.icon as keyof typeof iconMap];
               const featured = i === 0;
               return (
@@ -195,7 +179,7 @@ export default function Home() {
                       </h3>
                       <p className="mt-2 text-lg font-medium text-ink/80">{item.tagline}</p>
                       <p className="mt-3 max-w-md text-sm leading-6 text-neutral-600">{item.line}</p>
-                      {"tags" in item && item.tags && (
+                      {item.tags && item.tags.length > 0 && (
                         <ul className="mt-5 flex flex-wrap gap-2">
                           {item.tags.map((t) => (
                             <li key={t} className="rounded-full border border-ink/10 bg-white px-3 py-1 text-xs font-medium text-neutral-700 transition-colors duration-300 group-hover:border-copper/30">
@@ -227,7 +211,7 @@ export default function Home() {
             </h2>
           </Reveal>
           <ol className="mt-12 grid border-y border-ink/10 sm:grid-cols-2 lg:grid-cols-5 lg:divide-x lg:divide-ink/10">
-            {solutions.process.map((step, i) => (
+            {home.process.map((step, i) => (
               <Reveal key={step.number} delay={i * 60}>
                 <li className="group h-full list-none border-b border-ink/10 p-6 transition-colors duration-300 hover:bg-white last:border-b-0 sm:border-b-0">
                   <span className="font-mono text-xs text-copper">{step.number}</span>
@@ -259,7 +243,7 @@ export default function Home() {
       <section className="border-t border-ink/10">
         <div className="mx-auto max-w-6xl px-6 py-24">
           <div className="grid gap-5 sm:grid-cols-3">
-            {solutions.whyUs.map((item, i) => (
+            {home.whyUs.map((item, i) => (
               <Reveal key={item.title} delay={i * 60}>
                 <div className="h-full rounded-2xl border border-ink/10 bg-white p-7 transition-colors duration-300 hover:border-copper/60">
                   <h3 className="font-display text-xl font-extrabold tracking-tight">{item.title}</h3>
@@ -270,7 +254,7 @@ export default function Home() {
           </div>
           <Reveal>
             <p className="mt-10 text-center font-mono text-xs uppercase tracking-wider text-neutral-500">
-              {solutions.reach}
+              {home.reach}
             </p>
           </Reveal>
         </div>
@@ -307,10 +291,8 @@ export default function Home() {
   );
 }
 
-type Offering = (typeof solutions.built)[number];
-
-function OfferingVisual({ item }: { item: Offering }) {
-  if ("flow" in item && item.flow) {
+function OfferingVisual({ item }: { item: HomeCard }) {
+  if (item.flow && item.flow.length > 0) {
     return (
       <ol className="flex flex-wrap items-center gap-2 self-end">
         {item.flow.map((step, i) => (
@@ -318,14 +300,14 @@ function OfferingVisual({ item }: { item: Offering }) {
             <span className="rounded-lg border border-ink/10 bg-white px-3 py-2 text-xs font-semibold shadow-sm transition-colors duration-300 group-hover:border-copper/30">
               {step}
             </span>
-            {i < item.flow.length - 1 && <span aria-hidden className="text-copper">→</span>}
+            {i < item.flow!.length - 1 && <span aria-hidden className="text-copper">→</span>}
           </li>
         ))}
       </ol>
     );
   }
 
-  const images = ("images" in item ? item.images : []) as { src: string; alt: string; phone?: boolean }[];
+  const images = item.images ?? [];
   if (images.length === 0) return null;
   const [main, second] = images;
 

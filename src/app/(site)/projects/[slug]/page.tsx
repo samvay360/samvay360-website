@@ -1,51 +1,38 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import projects from "@/data/projects.json";
-import studies from "@/data/case-studies.json";
 import { FadeIn } from "@/components/fade-in";
 import { BrandRing } from "@/components/brand-ring";
 import { Reveal } from "@/components/reveal";
-import { Gallery, type GalleryImage } from "@/components/gallery";
+import { Gallery } from "@/components/gallery";
+import { getCaseStudies, getProjects } from "@/lib/content";
 
-type Study = {
-  overview: string;
-  sector: string;
-  highlights: string[];
-  stack?: string[];
-  year?: string;
-  challenge: string;
-  outcome: string;
-  workflow?: string[];
-  roles?: { name: string; text: string }[];
-  outcomes?: string[];
-  images: GalleryImage[];
-};
+async function load(slug: string) {
+  const [projects, studies] = await Promise.all([getProjects(), getCaseStudies()]);
+  return { project: projects.find((p) => p.id === slug), study: studies[slug] };
+}
 
-const caseStudies = studies as Record<string, Study>;
-const find = (slug: string) => projects.find((p) => p.id === slug);
-
-export function generateStaticParams() {
-  return Object.keys(caseStudies).map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  const studies = await getCaseStudies();
+  return Object.keys(studies).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: PageProps<"/projects/[slug]">): Promise<Metadata> {
   const { slug } = await params;
-  const project = find(slug);
-  if (!project || !caseStudies[slug]) return {};
+  const { project, study } = await load(slug);
+  if (!project || !study) return {};
   return {
     title: `${project.name} | Samvay360`,
-    description: caseStudies[slug].overview,
+    description: study.overview,
     alternates: { canonical: `/projects/${slug}` },
   };
 }
 
 export default async function CaseStudyPage({ params }: PageProps<"/projects/[slug]">) {
   const { slug } = await params;
-  const project = find(slug);
-  const study = caseStudies[slug];
+  const { project, study } = await load(slug);
   if (!project || !study) notFound();
 
   const facts = [

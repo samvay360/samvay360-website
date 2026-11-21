@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import alu360 from "@/data/alu360.json";
+import { getAlu360 } from "@/lib/content";
 import { FadeIn } from "@/components/fade-in";
 import { BrandRing } from "@/components/brand-ring";
 import { Reveal } from "@/components/reveal";
@@ -20,23 +20,24 @@ export const metadata: Metadata = {
   alternates: { canonical: "/products/alu360" },
   openGraph: {
     title: "Alu360 by Samvay360",
-    description: alu360.hero.description,
+    description:
+      "Design windows, work out material and cutting plans, make quotations and generate GST invoices in one place.",
     url: "/products/alu360",
   },
 };
 
 const BROCHURE = "/downloads/alu360-brochure.pdf";
 
-const jsonLd = {
+const jsonLd = (description: string) => ({
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   name: "Alu360",
   applicationCategory: "BusinessApplication",
   operatingSystem: "Web",
-  description: alu360.hero.description,
+  description,
   url: ALU360_URL,
   publisher: { "@type": "Organization", name: "Samvay360" },
-};
+});
 
 function DownloadIcon() {
   return (
@@ -49,8 +50,8 @@ function DownloadIcon() {
 const btn =
   "inline-flex rounded-lg px-6 py-3.5 font-mono text-xs uppercase tracking-wider transition-all duration-300 hover:-translate-y-0.5";
 
-export default function Alu360Page() {
-  const { hero, sections } = alu360;
+export default async function Alu360Page() {
+  const { hero, sections } = await getAlu360();
 
   return (
     <div>
@@ -139,7 +140,7 @@ export default function Alu360Page() {
       </section>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(hero.description)) }}
       />
     </div>
   );

@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  images: {
+    // Images uploaded in the Sanity Studio are served from Sanity's CDN.
+    remotePatterns: [{ protocol: "https", hostname: "cdn.sanity.io" }],
+  },
   async redirects() {
     return [
       { source: "/about", destination: "/#name", permanent: true },

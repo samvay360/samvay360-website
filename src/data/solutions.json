@@ -128,5 +128,19 @@
       "description": "Before we build anything, we see how you work today. Then a demo, a trial, and changes until it fits."
     }
   ],
-  "reach": "Based in Gujarat, India. Working with businesses wherever they are."
+  "reach": "Based in Gujarat, India. Working with businesses wherever they are.",
+  "builtFor": [
+    "Aluminium fabrication",
+    "Extrusion",
+    "Powder coating",
+    "Manufacturing",
+    "Real estate",
+    "Custom software & ERP",
+    "AI-native apps",
+    "Automations",
+    "IoT",
+    "Websites",
+    "Quotations & invoicing"
+  ],
+  "manifesto": "We design software around how your business already runs. Websites came first. Custom software, AI, IoT and Alu360 followed, one client's problem at a time. We stay in touch long after launch."
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import projects from "@/data/projects.json";
+import { getProjects } from "@/lib/content";
 import { ProjectsGrid } from "@/components/projects-grid";
 import { FadeIn } from "@/components/fade-in";
 import { BrandRing } from "@/components/brand-ring";
@@ -10,7 +10,8 @@ export const metadata: Metadata = {
     "Products and projects built by Samvay360, from in-house tools to custom software for our partners.",
 };
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const projects = await getProjects();
   return (
     <div>
       <section className="dot-grid relative overflow-hidden">
