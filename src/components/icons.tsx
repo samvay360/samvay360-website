@@ -74,3 +74,24 @@ export function IconFlow(props: React.SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+export function IconSpark(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} {...props}>
+      <path
+        d="M12 3v3M12 18v3M3 12h3M18 12h3M12 8.5l1.2 2.3 2.3 1.2-2.3 1.2L12 15.5l-1.2-2.3L8.5 12l2.3-1.2L12 8.5Z"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
+
+export function IconChip(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.6} {...props}>
+      <rect x="7" y="7" width="10" height="10" rx="2" />
+      <path d="M10 3v4M14 3v4M10 17v4M14 17v4M3 10h4M3 14h4M17 10h4M17 14h4" strokeLinecap="round" />
+    </svg>
+  );
+}

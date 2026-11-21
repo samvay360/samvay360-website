@@ -1,11 +1,9 @@
 import { Reveal } from "@/components/reveal";
-import testimonials from "@/data/testimonials.json";
+import { getTestimonials } from "@/lib/content";
 
-type Testimonial = { quote: string; name: string; role: string; business: string };
-
-// Renders nothing until real, approved quotes are added to data/testimonials.json.
-export function Testimonials() {
-  const items = testimonials as Testimonial[];
+// Renders nothing until real, approved quotes are added in the CMS (or data/testimonials.json).
+export async function Testimonials() {
+  const items = await getTestimonials();
   if (items.length === 0) return null;
   return (
     <section className="border-t border-neutral-200 bg-white">

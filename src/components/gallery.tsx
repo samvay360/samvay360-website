@@ -48,7 +48,7 @@ export function Gallery({ images }: { images: GalleryImage[] }) {
             alt={current.alt}
             fill
             sizes="(min-width: 1024px) 900px, 100vw"
-            className={portrait ? "object-contain" : "object-cover object-top"}
+            className={`animate-[img-in_0.45s_cubic-bezier(0.16,1,0.3,1)] ${portrait ? "object-contain" : "object-cover object-top"}`}
             priority={index === 0}
           />
         </div>

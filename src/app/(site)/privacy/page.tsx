@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { CONTACT_EMAIL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Samvay360",
+  title: "Privacy Policy | Samvay360",
   robots: { index: true, follow: true },
   alternates: { canonical: "/privacy" },
 };

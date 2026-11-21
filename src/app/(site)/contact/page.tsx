@@ -5,7 +5,7 @@ import { BrandRing } from "@/components/brand-ring";
 import { CONTACT_EMAIL, WHATSAPP_NUMBER, whatsappLink } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Contact — Samvay360",
+  title: "Contact | Samvay360",
   description:
     "Tell us how your business works today and we'll show you what we can build around it.",
   alternates: { canonical: "/contact" },
@@ -18,7 +18,7 @@ export default function ContactPage() {
         <BrandRing className="pointer-events-none absolute -right-32 -top-32 h-[24rem] w-[24rem] opacity-50" />
         <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-32 sm:pb-28 sm:pt-40">
           <FadeIn>
-            <span className="label-bracket font-mono text-xs uppercase tracking-widest text-copper">
+            <span className="font-mono text-xs uppercase tracking-widest text-copper">
               Contact
             </span>
             <h1 className="mt-4 max-w-xl font-display text-4xl font-extrabold tracking-tight sm:text-5xl">

@@ -1,9 +1,8 @@
 import { Reveal } from "@/components/reveal";
-import journey from "@/data/journey.json";
+import { getJourney } from "@/lib/content";
 
-type Step = (typeof journey)[number] & { href?: string; external?: boolean };
-
-export function Journey({ light = false }: { light?: boolean }) {
+export async function Journey({ light = false }: { light?: boolean }) {
+  const journey = await getJourney();
   return (
     <ol className="relative">
       {/* Centre spine (desktop) / left spine (mobile) */}
@@ -11,7 +10,7 @@ export function Journey({ light = false }: { light?: boolean }) {
         aria-hidden
         className="absolute bottom-0 left-4 top-0 w-px bg-gradient-to-b from-transparent via-copper/50 to-transparent lg:left-1/2"
       />
-      {(journey as Step[]).map((step, i) => {
+      {journey.map((step, i) => {
         const left = i % 2 === 0;
         return (
           <li key={step.title} className="relative list-none pb-16 last:pb-0 lg:pb-24">

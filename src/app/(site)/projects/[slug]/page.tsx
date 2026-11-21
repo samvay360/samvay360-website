@@ -1,51 +1,38 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import projects from "@/data/projects.json";
-import studies from "@/data/case-studies.json";
 import { FadeIn } from "@/components/fade-in";
-import { Reveal } from "@/components/reveal";
 import { BrandRing } from "@/components/brand-ring";
-import { Gallery, type GalleryImage } from "@/components/gallery";
+import { Reveal } from "@/components/reveal";
+import { Gallery } from "@/components/gallery";
+import { getCaseStudies, getProjects } from "@/lib/content";
 
-type Study = {
-  overview: string;
-  sector: string;
-  highlights: string[];
-  stack?: string[];
-  year?: string;
-  challenge: string;
-  outcome: string;
-  workflow?: string[];
-  roles?: { name: string; text: string }[];
-  outcomes?: string[];
-  images: GalleryImage[];
-};
+async function load(slug: string) {
+  const [projects, studies] = await Promise.all([getProjects(), getCaseStudies()]);
+  return { project: projects.find((p) => p.id === slug), study: studies[slug] };
+}
 
-const caseStudies = studies as Record<string, Study>;
-const find = (slug: string) => projects.find((p) => p.id === slug);
-
-export function generateStaticParams() {
-  return Object.keys(caseStudies).map((slug) => ({ slug }));
+export async function generateStaticParams() {
+  const studies = await getCaseStudies();
+  return Object.keys(studies).map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({
   params,
 }: PageProps<"/projects/[slug]">): Promise<Metadata> {
   const { slug } = await params;
-  const project = find(slug);
-  if (!project || !caseStudies[slug]) return {};
+  const { project, study } = await load(slug);
+  if (!project || !study) return {};
   return {
-    title: `${project.name} — Samvay360`,
-    description: caseStudies[slug].overview,
+    title: `${project.name} | Samvay360`,
+    description: study.overview,
     alternates: { canonical: `/projects/${slug}` },
   };
 }
 
 export default async function CaseStudyPage({ params }: PageProps<"/projects/[slug]">) {
   const { slug } = await params;
-  const project = find(slug);
-  const study = caseStudies[slug];
+  const { project, study } = await load(slug);
   if (!project || !study) notFound();
 
   const facts = [
@@ -64,7 +51,7 @@ export default async function CaseStudyPage({ params }: PageProps<"/projects/[sl
             <Link href="/projects" className="font-mono text-xs uppercase tracking-wider text-neutral-500 hover:text-copper">
               ← All projects
             </Link>
-            <p className="mt-6 label-bracket font-mono text-xs uppercase tracking-widest text-copper">
+            <p className="mt-6 font-mono text-xs uppercase tracking-widest text-copper">
               {project.type}
             </p>
             <h1 className="mt-3 font-display text-4xl font-extrabold tracking-tight sm:text-5xl">

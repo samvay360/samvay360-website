@@ -1,21 +1,57 @@
 import type { Metadata } from "next";
-import alu360 from "@/data/alu360.json";
+import { getAlu360 } from "@/lib/content";
 import { FadeIn } from "@/components/fade-in";
-import { Reveal } from "@/components/reveal";
 import { BrandRing } from "@/components/brand-ring";
+import { Reveal } from "@/components/reveal";
 import { ALU360_EMAIL, ALU360_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Alu360 — Aluminium Calculator | Samvay360",
-  description: alu360.hero.description,
+  title: "Alu360: Aluminium Window Calculator, Quotation & GST Billing Software | Samvay360",
+  description:
+    "Alu360 is software for aluminium window and door fabricators: design windows, calculate material and cutting plans, make quotations and generate GST invoices in one place.",
+  keywords: [
+    "aluminium window calculator",
+    "aluminium fabrication software",
+    "aluminium cutting optimisation",
+    "window quotation software",
+    "GST invoice software for fabricators",
+    "Alu360",
+  ],
   alternates: { canonical: "/products/alu360" },
+  openGraph: {
+    title: "Alu360 by Samvay360",
+    description:
+      "Design windows, work out material and cutting plans, make quotations and generate GST invoices in one place.",
+    url: "/products/alu360",
+  },
 };
+
+const BROCHURE = "/downloads/alu360-brochure.pdf";
+
+const jsonLd = (description: string) => ({
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  name: "Alu360",
+  applicationCategory: "BusinessApplication",
+  operatingSystem: "Web",
+  description,
+  url: ALU360_URL,
+  publisher: { "@type": "Organization", name: "Samvay360" },
+});
+
+function DownloadIcon() {
+  return (
+    <svg aria-hidden viewBox="0 0 24 24" className="h-4 w-4 transition-transform duration-300 group-hover:translate-y-0.5" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round">
+      <path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14" />
+    </svg>
+  );
+}
 
 const btn =
   "inline-flex rounded-lg px-6 py-3.5 font-mono text-xs uppercase tracking-wider transition-all duration-300 hover:-translate-y-0.5";
 
-export default function Alu360Page() {
-  const { hero, sections } = alu360;
+export default async function Alu360Page() {
+  const { hero, sections } = await getAlu360();
 
   return (
     <div>
@@ -23,7 +59,7 @@ export default function Alu360Page() {
         <BrandRing className="pointer-events-none absolute -right-32 -top-32 h-[26rem] w-[26rem] opacity-50" />
         <div className="relative mx-auto max-w-6xl px-6 pb-24 pt-36">
           <FadeIn>
-            <p className="label-bracket font-mono text-xs uppercase tracking-widest text-copper">{hero.eyebrow}</p>
+            <p className="font-mono text-xs uppercase tracking-widest text-copper">{hero.eyebrow}</p>
             <h1 className="mt-4 text-5xl font-extrabold tracking-tight sm:text-6xl">{hero.name}</h1>
             <p className="mt-4 max-w-xl text-xl text-neutral-700">{hero.tagline}</p>
             <p className="mt-4 max-w-xl text-lg leading-8 text-neutral-600">{hero.description}</p>
@@ -41,6 +77,14 @@ export default function Alu360Page() {
                 className={`${btn} border border-ink/20 text-ink hover:border-copper hover:text-copper`}
               >
                 Request a demo
+              </a>
+              <a
+                href={BROCHURE}
+                download="Alu360-Brochure.pdf"
+                className={`${btn} group items-center gap-2 border border-copper/40 bg-copper/5 text-copper hover:bg-copper hover:text-white`}
+              >
+                <DownloadIcon />
+                Download brochure (PDF)
               </a>
             </div>
           </FadeIn>
@@ -86,7 +130,18 @@ export default function Alu360Page() {
         >
           Request a demo
         </a>
+        <p className="mt-5 text-sm text-neutral-500">
+          Prefer to read first?{" "}
+          <a href={BROCHURE} download="Alu360-Brochure.pdf" className="font-medium text-copper underline decoration-copper/40 underline-offset-4 transition-colors hover:text-ink">
+            Download the Alu360 brochure
+          </a>{" "}
+          (PDF, 180 KB)
+        </p>
       </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd(hero.description)) }}
+      />
     </div>
   );
 }
